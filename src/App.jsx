@@ -6,15 +6,15 @@ import NotFoundPage from "./pages/common/NotFoundPage";
 function App() {
 
   return (
-      <BrowserRouter>
-        <NavBar />
+    <BrowserRouter>
+      <NavBar />
         <Routes>
           {APP_ROUTES.map((route) => (
             <Route path={route.path} element={<route.element />} key={route.id} />
           ))}
-          <Route path={ROUTE_ANY} element={<NotFoundPage />}/>    
+          <Route path={ROUTE_ANY} element={<NotFoundPage />} />
         </Routes>
-      </BrowserRouter>
+    </BrowserRouter>
   )
 }
 

@@ -30,7 +30,7 @@ export default function NavBar() {
   }
 
   return (
-    <div className="z-10 fixed top-0 left-0 right-0 flex justify-between bg-white text-black h-16 md:h-20 opacity-90 p-4">
+    <div className="z-50 fixed top-0 left-0 right-0 flex justify-between bg-white text-black h-16 md:h-20 opacity-90 p-4">
       <Link to={ROUTE_HOME} className="flex items-center" onClick={closeMobileMenu}>
         <img src="/aascLogoWhite.png" alt="Alumni Association" className="h-12 md:h-16" />
       </Link>
