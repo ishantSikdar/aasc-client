@@ -8,7 +8,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 500);
+      setIsMobile(window.innerWidth < 768);
     }
 
     handleResize();
@@ -20,7 +20,7 @@ export default function NavBar() {
   }, []);
 
   const toggleMobileMenu = () => {
-    setShowMenu(prevState => !prevState)
+    setShowMenu(prevState => !prevState);
   }
 
   const closeMobileMenu = () => {
@@ -28,13 +28,13 @@ export default function NavBar() {
   }
 
   return (
-    <div className="z-10 fixed top-0 left-0 right-0 flex justify-between bg-white font-bold text-black h-16 opacity-80 p-4">
+    <div className="z-10 fixed top-0 left-0 right-0 flex justify-between bg-white text-black h-16 md:h-20 opacity-90 p-4">
       <Link to={ROUTE_HOME} className="flex items-center" onClick={closeMobileMenu}>
-        <img src="/aascLogoWhite.png" alt="Alumni Association" className="h-12" />
+        <img src="/aascLogoWhite.png" alt="Alumni Association" className="h-12 md:h-16" />
       </Link>
 
       {/* For Tab/Desktop screen */}
-      {!isMobile && <div className="flex justify-between items-center gap-4">
+      {!isMobile && <div className="flex justify-between items-center px-7 lg:px-10 gap-14 text-xl font-bold">
         <Link to={ROUTE_ABOUT}>About Us</Link>
         <Link to={ROUTE_COUNCIL}>Council</Link>
         <Link to={ROUTE_EVENTS}>Events</Link>
@@ -42,21 +42,23 @@ export default function NavBar() {
       </div>}
 
       {/* Hamburger button to enable Mobile menu */}
-      {isMobile && <button onClick={toggleMobileMenu} className="flex flex-col gap-1 my-auto">
+      {isMobile && <button onClick={toggleMobileMenu} className={`z-10 flex flex-col gap-1 my-auto p-2 rounded-md border-2 ${showMenu ? "border-sky-400" : ""}`}>
         <div className="w-7 h-[4px] bg-black"></div>
         <div className="w-7 h-[4px] bg-black"></div>
         <div className="w-7 h-[4px] bg-black"></div>
       </button>}
 
       {/* For Mobile, Menu Screen */}
-      {isMobile && showMenu && (
-        <div className="absolute flex flex-col top-full right-0 bg-white border border-gray-200 shadow-md p-4 mx-2">
-          <Link to={ROUTE_ABOUT} onClick={closeMobileMenu}>About Us</Link>
-          <Link to={ROUTE_COUNCIL} onClick={closeMobileMenu}>Council</Link>
-          <Link to={ROUTE_EVENTS} onClick={closeMobileMenu}>Events</Link>
-          <Link to={ROUTE_GALLERY} onClick={closeMobileMenu}>Gallery</Link>
+      {isMobile && <div className={`fixed top-0 right-0 bottom-0 opacity-100 bg-white w-56 z-5 shadow-md overflow-y-auto transform transition-transform ${showMenu ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="mt-20 flex flex-col gap-1 text-right p-4 font-light uppercase text-lg">
+          <Link to={ROUTE_HOME} onClick={closeMobileMenu} className="border-b-[1pt] border-[#252525] p-2">Home</Link>
+          <Link to={ROUTE_ABOUT} onClick={closeMobileMenu} className="border-b-[1pt] border-[#252525] p-2">About Us</Link>
+          <Link to={ROUTE_COUNCIL} onClick={closeMobileMenu} className="border-b-[1pt] border-[#252525] p-2">Council</Link>
+          <Link to={ROUTE_EVENTS} onClick={closeMobileMenu} className="border-b-[1pt] border-[#252525] p-2">Events</Link>
+          <Link to={ROUTE_GALLERY} onClick={closeMobileMenu} className="border-b-[1pt] border-[#252525] p-2">Gallery</Link>
         </div>
-      )}
+      </div>}
+
     </div>
   );
 }
