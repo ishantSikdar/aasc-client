@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ROUTE_ABOUT, ROUTE_COUNCIL, ROUTE_EVENTS, ROUTE_GALLERY, ROUTE_HOME } from "../../constants/routes";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function NavBar() {
   const [isMobile, setIsMobile] = useState(false);
@@ -41,11 +43,10 @@ export default function NavBar() {
         <Link to={ROUTE_GALLERY}>Gallery</Link>
       </div>}
 
-      {/* Hamburger button to enable Mobile menu */}
-      {isMobile && <button onClick={toggleMobileMenu} className={`z-10 flex flex-col gap-1 my-auto p-2 rounded-md border-2 ${showMenu ? "border-sky-400" : ""}`}>
-        <div className="w-7 h-[4px] bg-black"></div>
-        <div className="w-7 h-[4px] bg-black"></div>
-        <div className="w-7 h-[4px] bg-black"></div>
+      {/* Hamburger button to enable Mobile menu, only displays on mobile size res */}
+      {isMobile && <button onClick={toggleMobileMenu} className={`z-10 p-2 text-black`}>
+        {!showMenu && <FontAwesomeIcon icon={faBars} size="xl" />}
+        {showMenu && <FontAwesomeIcon icon={faXmark} size="xl" />}
       </button>}
 
       {/* For Mobile, Menu Screen */}
