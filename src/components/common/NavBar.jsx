@@ -44,9 +44,8 @@ export default function NavBar() {
       </div>}
 
       {/* Hamburger button to enable Mobile menu, only displays on mobile size res */}
-      {isMobile && <button onClick={toggleMobileMenu} className={`z-10 p-2 text-black`}>
-        {!showMenu && <FontAwesomeIcon icon={faBars} size="xl" />}
-        {showMenu && <FontAwesomeIcon icon={faXmark} size="xl" />}
+      {isMobile && <button onClick={toggleMobileMenu} className={`z-10 text-black`}>
+        {!showMenu ? <FontAwesomeIcon icon={faBars} size="xl" /> : <FontAwesomeIcon icon={faXmark} size="xl" />}
       </button>}
 
       {/* For Mobile, Menu Screen */}
