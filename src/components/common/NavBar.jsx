@@ -1,25 +1,11 @@
 import { Link } from "react-router-dom";
 import { ROUTE_ABOUT, ROUTE_COUNCIL, ROUTE_EVENTS, ROUTE_GALLERY, ROUTE_HOME } from "../../constants/routes";
-import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { useState } from "react";
 
-export default function NavBar() {
-  const [isMobile, setIsMobile] = useState(false);
+export default function NavBar({ isMobile }) {
   const [showMenu, setShowMenu] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    }
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  }, []);
 
   const toggleMobileMenu = () => {
     setShowMenu(prevState => !prevState);

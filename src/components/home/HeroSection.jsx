@@ -3,9 +3,9 @@ export default function HeroSection() {
 		<div
 			className="h-screen text-white flex justify-center items-center text-center relative"
 			style={{
-				backgroundImage: "url('/college.png')",
-				backgroundSize: "cover",
-				backgroundPosition: "center",
+				backgroundImage: 'url("/college.png")',
+				backgroundSize: 'cover',
+				backgroundPosition: 'center',
 			}}
 		>
 			{/* Overlay div to darken the background image */}
