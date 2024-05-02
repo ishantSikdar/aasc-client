@@ -1,3 +1,9 @@
-export default function CouncilPage() {
-    return <div></div>
+import CouncilPage from "../../components/council/eCouncil";
+
+export default function ExeCouncil({ isMobile }) {
+  return (
+    <div>
+      <CouncilPage />
+    </div>
+  );
 }
