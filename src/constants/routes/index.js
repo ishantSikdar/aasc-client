@@ -3,7 +3,8 @@ import HomePage from "../../pages/home";
 
 export const ROUTE_HOME = "/";
 export const ROUTE_ABOUT = "/about";
-export const ROUTE_COUNCIL = "/council";
+export const ROUTE_EXE_COUNCIL = "/exe-council";
+export const ROUTE_AASC_COUNCIL = "/aasc-council";
 export const ROUTE_EVENTS = "/events";
 export const ROUTE_GALLERY = "/gallery";
 export const ROUTE_ANY = "*";
@@ -17,7 +18,7 @@ export const APP_ROUTES = [
         element: HomePage
     },{
         id: 2,
-        path: ROUTE_COUNCIL,
+        path: ROUTE_EXE_COUNCIL,
         element: CouncilPage
     }
 
