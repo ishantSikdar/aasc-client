@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faLinkedin, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { ROUTE_ABOUT, ROUTE_EXE_COUNCIL, ROUTE_EVENTS, ROUTE_GALLERY } from "../../constants/routes";
+import { ROUTE_ABOUT, ROUTE_EXE_COUNCIL, ROUTE_EVENTS, ROUTE_GALLERY, ROUTE_AASC_COUNCIL } from "../../constants/routes";
 
 export default function Footer() {
 	return (
@@ -16,7 +16,8 @@ export default function Footer() {
 				<div className="w-[33%] flex flex-col">
 					<h3 className="font-bold uppercase text-xl">Contact Us</h3>
 					<Link to={ROUTE_ABOUT} className="hover:underline cursor-pointer">About Us</Link>
-					<Link to={ROUTE_EXE_COUNCIL} className="hover:underline cursor-pointer">Team</Link>
+					<Link to={ROUTE_EXE_COUNCIL} className="hover:underline cursor-pointer">Executive Council</Link>
+					<Link to={ROUTE_AASC_COUNCIL} className="hover:underline cursor-pointer">Student Council</Link>
 					<Link to={ROUTE_EVENTS} className="hover:underline cursor-pointer">Events</Link>
 					<Link to={ROUTE_GALLERY} className="hover:underline cursor-pointer">Gallery</Link>
 				</div>
