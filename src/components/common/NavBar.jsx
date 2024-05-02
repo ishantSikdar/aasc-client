@@ -28,6 +28,7 @@ export default function NavBar({ isMobile }) {
 
       {/* For Tab/Desktop screen */}
       {!isMobile && <div className="relative flex justify-between items-center px-7 lg:px-10 gap-14 text-xl font-medium uppercase">
+        <Link to={ROUTE_HOME}>Home</Link>
         <Link to={ROUTE_ABOUT}>About Us</Link>
         <button onClick={toggleCouncil} className="relative uppercase">
           Council

@@ -9,7 +9,7 @@ export default function AboutBrief({ isMobile }) {
 
       <div className="my-auto md:w-[50%] bg-white p-10 flex flex-col gap-3">
         <h2 className="uppercase font-bold text-2xl md:text-3xl xl:text-4xl">About the Alumni Association</h2>
-        <p className="font-light text-sm md:text-md xl:text-lg">
+        <p className="font-light text-sm md:text-md xl:text-lg text-justify">
           The Alumni Association has been created with the vision of fostering lifelong connections and celebrating the achievements of our esteemed alumni. We serve as a bridge between past, present, and future, providing a platform for networking, mentorship, and professional growth. We endeavour to foster the legacy of our alma mater while also championing the diverse accomplishments of our alumni.
         </p>
         <Link to={ROUTE_ABOUT} className="uppercase underline text-[#4b39b5] font-bold">Read More</Link>
