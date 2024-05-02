@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faLinkedin, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { ROUTE_ABOUT, ROUTE_EXE_COUNCIL, ROUTE_EVENTS, ROUTE_GALLERY, ROUTE_AASC_COUNCIL } from "../../constants/routes";
 
 export default function Footer() {
@@ -33,11 +33,11 @@ export default function Footer() {
 			{/* Bottom Container */}
 			<div className="p-10 md:pt-0">
 				<div className="flex gap-4 justify-center align-center my-2">
-					<FontAwesomeIcon icon={faInstagram} size="2x" />
-					<FontAwesomeIcon icon={faFacebook} size="2x" />
-					<FontAwesomeIcon icon={faLinkedin} size="2x" />
+					<a href={`https://www.linkedin.com/company/alumni-association-student-council/`}><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
+					<a href={`https://www.instagram.com/msi_alumni_association`}><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
+					<a href="#"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
 				</div>
-				<div className="text-center">© Created by Tech-Team of Alumni Association</div>
+				<div className="text-center">© Created by Tech-Team of Alumni Association Student Council</div>
 			</div>
 		</div>
 	)

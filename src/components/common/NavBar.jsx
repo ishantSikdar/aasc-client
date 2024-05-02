@@ -22,9 +22,15 @@ export default function NavBar({ isMobile }) {
 
   return (
     <div className="z-50 fixed top-0 left-0 right-0 flex justify-between bg-white text-black h-16 md:h-20 opacity-90 p-4">
-      <Link to={ROUTE_HOME} className="flex items-center" onClick={closeMobileMenu}>
-        <img src="/aascLogoWhite.png" alt="Alumni Association" className="h-12 md:h-16" />
-      </Link>
+      <div className="flex gap-2 lg:gap-4 items-center">
+        <a href="https://www.msijanakpuri.com/" target="_blank">
+          <img src="/msiLogo.jpg" alt="Alumni Association" className="h-12 md:h-16" />
+        </a>
+        <Link to={ROUTE_HOME} onClick={closeMobileMenu}>
+          <img src="/aascLogoMSI.png" alt="Alumni Association" className="h-12 md:h-16" />
+        </Link>
+      </div>
+
 
       {/* For Tab/Desktop screen */}
       {!isMobile && <div className="relative flex justify-between items-center px-7 lg:px-10 gap-14 text-xl font-medium uppercase">
