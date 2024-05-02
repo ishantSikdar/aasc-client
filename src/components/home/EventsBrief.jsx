@@ -1,4 +1,4 @@
-import EventBrief from "../common/Event";
+import EventBrief from "../common/EventBriefCard";
 
 export default function EventsBrief({ isMobile }) {
     return (

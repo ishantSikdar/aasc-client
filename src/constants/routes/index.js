@@ -1,5 +1,6 @@
 import AboutPage from "../../pages/aboutUs/AboutPage";
 import CouncilPage from "../../pages/council";
+import AascCouncilPage from "../../pages/aascCouncil";
 import HomePage from "../../pages/home";
 
 export const ROUTE_HOME = "/";
@@ -26,4 +27,9 @@ export const APP_ROUTES = [
     path: ROUTE_ABOUT,
     element: AboutPage
   },
-];
+  {
+    id: 4,
+    path: ROUTE_AASC_COUNCIL,
+    element: AascCouncilPage
+  },
+]
