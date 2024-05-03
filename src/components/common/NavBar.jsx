@@ -21,7 +21,7 @@ export default function NavBar({ isMobile }) {
   }
 
   return (
-    <div className="z-50 fixed top-0 left-0 right-0 flex justify-between bg-white text-black h-16 md:h-20 opacity-90 p-4">
+    <div className="z-50 fixed top-0 left-0 right-0 flex justify-between bg-white shadow-md text-black h-16 md:h-20 opacity-90 p-4">
       <div className="flex gap-2 lg:gap-4 items-center">
         <a href="https://www.msijanakpuri.com/" target="_blank">
           <img src="/msiLogo.jpg" alt="Alumni Association" className="h-12 md:h-16" />
@@ -33,12 +33,12 @@ export default function NavBar({ isMobile }) {
 
 
       {/* For Tab/Desktop screen */}
-      {!isMobile && <div className="relative flex justify-between items-center px-7 lg:px-10 gap-14 text-xl font-medium uppercase">
+      {!isMobile && <div className="relative flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-md font-light uppercase">
         <Link to={ROUTE_HOME}>Home</Link>
         <Link to={ROUTE_ABOUT}>About Us</Link>
         <button onClick={toggleCouncil} className="relative uppercase">
           Council
-          {!isMobile && showCouncil && <div className="absolute p-3 w-52 flex flex-col gap-2 bg-gray-100 top-10 right-[-75%] text-sm">
+          {!isMobile && showCouncil && <div className="absolute p-3 w-52 flex flex-col gap-2 shadow-md bg-white top-10 right-[-75%] text-sm">
             <Link to={ROUTE_EXE_COUNCIL}>Executive Council</Link>
             <div className="w-full h-[1pt] bg-[#252525]"></div>
             <Link to={ROUTE_AASC_COUNCIL}>AASC Council</Link>
