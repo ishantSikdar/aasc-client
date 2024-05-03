@@ -3,6 +3,7 @@ import { ROUTE_ABOUT, ROUTE_EXE_COUNCIL, ROUTE_EVENTS, ROUTE_GALLERY, ROUTE_HOME
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
+import "./navbar.css";
 
 export default function NavBar({ isMobile }) {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,11 +18,11 @@ export default function NavBar({ isMobile }) {
   }
 
   const toggleCouncil = () => {
-    setShowCouncil(prev => !prev)
+    setShowCouncil(prev => !prev);
   }
 
   return (
-    <div className="z-50 fixed top-0 left-0 right-0 flex justify-between bg-white shadow-md text-black h-16 md:h-20 opacity-90 p-4">
+    <div className="z-50 fixed top-0 left-0 right-0 flex justify-between bg-white shadow-xl text-black h-16 md:h-20 opacity-90 p-4">
       <div className="flex gap-2 lg:gap-4 items-center">
         <a href="https://www.msijanakpuri.com/" target="_blank">
           <img src="/msiLogo.jpg" alt="Alumni Association" className="h-12 md:h-16" />
@@ -34,9 +35,9 @@ export default function NavBar({ isMobile }) {
 
       {/* For Tab/Desktop screen */}
       {!isMobile && <div className="relative flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-md font-light uppercase">
-        <Link to={ROUTE_HOME}>Home</Link>
-        <Link to={ROUTE_ABOUT}>About Us</Link>
-        <button onClick={toggleCouncil} className="relative uppercase">
+        <Link className="underline-animate" to={ROUTE_HOME}>Home</Link>
+        <Link className="underline-animate" to={ROUTE_ABOUT}>About Us</Link>
+        <button onClick={toggleCouncil} className="relative uppercase underline-animate">
           Council
           {!isMobile && showCouncil && <div className="absolute p-3 w-52 flex flex-col gap-2 shadow-md bg-white top-10 right-[-75%] text-sm">
             <Link to={ROUTE_EXE_COUNCIL}>Executive Council</Link>
@@ -44,8 +45,8 @@ export default function NavBar({ isMobile }) {
             <Link to={ROUTE_AASC_COUNCIL}>AASC Council</Link>
           </div>}
         </button>
-        <Link to={ROUTE_EVENTS}>Events</Link>
-        <Link to={ROUTE_GALLERY}>Gallery</Link>
+        <Link className="underline-animate" to={ROUTE_EVENTS}>Events</Link>
+        <Link className="underline-animate" to={ROUTE_GALLERY}>Gallery</Link>
       </div>}
 
 
