@@ -11,7 +11,7 @@ function AboutPage() {
             future, providing a platform for networking, mentorship, and
             professional growth. We endeavour to foster the legacy of our alma
             mater while also championing the diverse
-            accomplishments of our alumni.
+            accomplishments of our alumni.
           </p>
         </div>
         <div className="mt-8 md:mt-16  md:grid grid-cols-2 gap-20">
