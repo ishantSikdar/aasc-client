@@ -20,9 +20,7 @@ export default function HeroSection() {
 				<p className="text-sm md:text-lg leading-5 mx-5 lg:mx-40">
 					The Alumni Association of Maharaja Surajmal Institute aims at engaging, reminiscing and reconnecting with the fellow alumni of this prestigious institution. We are a one-stop hub to discover events, resources and opportunities related the alma mater. Whether you graduated last year or decades ago, our website serves as a beacon, guiding you back to the heart of our community.
 				</p>
-				<button className="w-max mx-auto my-3 md:my-5 uppercase px-12 py-4 bg-[#4b39b5] md:text-xl">
-					Register
-				</button>
+				
 			</div>
 		</div>
 	);

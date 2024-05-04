@@ -46,7 +46,7 @@ export default function NavBar({ isMobile }) {
           </div>}
         </button>
         <Link className="underline-animate" to={ROUTE_EVENTS}>Events</Link>
-        <Link className="underline-animate" to={ROUTE_GALLERY}>Gallery</Link>
+        {/* <Link className="underline-animate" to={ROUTE_GALLERY}>Gallery</Link> */}
       </div>}
 
 
