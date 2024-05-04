@@ -35,9 +35,9 @@ export default function CouncilPage() {
             <div className="text-xl md:text-2xl font-bold underline text-orange-800">
               {data1.designation}
             </div>
-            <p className="mt-2 mb-4">{data1.year}</p>
+      
             <div>
-              <p className="text-sm md:text-base leading-relaxed">
+              <p className="text-sm md:text-base leading-relaxed mt-2">
                 {data1.description}
               </p>
             </div>
@@ -59,8 +59,8 @@ export default function CouncilPage() {
                   {data2.name}
                 </h1>
               </div>
-              <div className="pr-7 mt-7">
-                <p className="pb-2">{data2.year}</p>
+              <div className=" m-auto  text-center md:text-start">
+              
                 <p>{data2.description}</p>
               </div>
             </div>
@@ -83,8 +83,8 @@ export default function CouncilPage() {
                   {data2.name}
                 </h1>
               </div>
-              <div className="pr-7 mt-7">
-                <p className="pb-2">{data2.year}</p>
+              <div className=" m-auto  text-center md:text-start">
+             
                 <p>{data2.description}</p>
               </div>
             </div>
