@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../../lib/sanity";
-import { simpleEventCard } from "../../lib/interface";
+import { SimpleEventCard } from "../../lib/interface";
 import EventCard from "./eventCard";
 import Loader from "../common/Loader";
 
 const EventsPage = () => {
-  const [data, setData] = useState<simpleEventCard[]>([]);
+  const [data, setData] = useState<SimpleEventCard[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     async function fetchData() {
       try {
         const query = `
-          *[_type == 'Events'] | order(_createdAt desc) {
+          *[_type == 'Events'] | order(Date desc) {
             _id,
             title,
             Date,

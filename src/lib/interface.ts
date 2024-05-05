@@ -1,15 +1,19 @@
-export interface simpleEventCard {
+export interface SimpleEventCard {
   _id: string;
   title: string;
-  Description: string;
+  description: string;
   currentSlug: string;
   titleImage: any;
-  Date: Date;
+  date: Date;
 }
 
-export interface fullEvent {
-  currentSlug: string;
-  title: string;
-  content: any;
-  titleImage: any;
+export interface FullEvent {
+  _id: string,    
+  title: string,
+  Description: string,
+  Date: Date,
+  PDF: any,
+  titleImage: any,
+  Link: string,
+  venue: string,
 }

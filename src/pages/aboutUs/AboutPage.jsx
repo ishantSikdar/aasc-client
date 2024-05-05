@@ -28,13 +28,7 @@ function AboutPage() {
           </h1>
           <hr className=" border-[#8c2727] border-solid border-2"></hr>
           <p className="md:text-lg mt-1">
-            This private non-profit university is committed to pushing
-            positive change and creating a caring world for
-            everyone.Established in 1920, University of El Dorado has long
-            been a home to critical thinking, progressive education, and a
-            conscientious community. This private non-profit university is
-            committed to pushing positive change and creating a caring world
-            for everyone.
+            The mission of the Alumni Association Student Council is to represent and advocate for current students, facilitate meaningful connections with alumni, organize events that promote engagement and tradition, and provide resources and support to enhance the student experience.
           </p>
         </div>
       </div>
@@ -44,43 +38,18 @@ function AboutPage() {
         </h1>
         <hr className=" border-[#8c2727] border-solid border-2 w-1/2"></hr>
         <p className="md:text-lg mt-1">
-          This private non-profit university is committed to pushing positive
-          change and creating a caring world for everyone.Established in 1920,
-          University of El Dorado has long been a home to critical thinking,
-          progressive education, and a conscientious community. This private
-          non-profit university is committed to pushing positive change and
-          creating a caring world for everyone.
+          Our objectives include fostering community, networking, mentorship, event organization, professional development, and enhancing institution reputation through alumni achievements.
         </p>
         <div className="m-6 ">
           <ul className="list-disc md:text-lg">
-            <li>
-              This private non-profit university is committed to pushing
-              positive change and creating a caring world for everyone
-            </li>
-            <li>
-              This private non-profit university is committed to pushing
-              positive change and creating a caring world for everyone
-            </li>
-            <li>
-              This private non-profit university is committed to pushing
-              positive change and creating a caring world for everyone
-            </li>
-            <li>
-              This private non-profit university is committed to pushing
-              positive change and creating a caring world for everyone
-            </li>
-            <li>
-              This private non-profit university is committed to pushing
-              positive change and creating a caring world for everyone
-            </li>
-            <li>
-              This private non-profit university is committed to pushing
-              positive change and creating a caring world for everyone
-            </li>
-            <li>
-              This private non-profit university is committed to pushing
-              positive change and creating a caring world for everyone
-            </li>
+            <li>Serve as a liaison between current students and alumni.</li>
+            <li>Foster a sense of community and continuity within the student body.</li>
+            <li>Provide networking opportunities for students to connect with alumni.</li>
+            <li>Facilitate mentorship programs to support student development.</li>
+            <li>Organize events and initiatives to enhance the student experience.</li>
+            <li>Promote professional development and career guidance for students.</li>
+            <li>Cultivate lifelong connections with the institution among students and alumni.</li>
+            <li>Enhancing the reputation and prestige of the institution through alumni achievements.</li>
           </ul>
         </div>
       </div>
