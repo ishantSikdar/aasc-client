@@ -2,6 +2,7 @@ import AboutPage from "../../pages/aboutUs/AboutPage";
 import CouncilPage from "../../pages/council";
 import AascCouncilPage from "../../pages/aascCouncil";
 import HomePage from "../../pages/home";
+import EventsPage from "../../pages/event";
 
 export const ROUTE_HOME = "/";
 export const ROUTE_ABOUT = "/about";
@@ -25,11 +26,16 @@ export const APP_ROUTES = [
   {
     id: 3,
     path: ROUTE_ABOUT,
-    element: AboutPage
+    element: AboutPage,
   },
   {
     id: 4,
     path: ROUTE_AASC_COUNCIL,
-    element: AascCouncilPage
+    element: AascCouncilPage,
   },
-]
+  {
+    id: 5,
+    path: ROUTE_EVENTS,
+    element: EventsPage,
+  },
+];
