@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { client } from "../../lib/sanity";
 import { simpleEventCard } from "../../lib/interface";
 import EventCard from "./eventCard";
+import Loader from "../common/Loader";
 
 const EventsPage = () => {
   const [data, setData] = useState<simpleEventCard[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -20,8 +22,11 @@ const EventsPage = () => {
 
         const fetchedData = await client.fetch(query);
         setData(fetchedData);
+        setIsLoading(false);
+
       } catch (error) {
         console.error("Error fetching events:", error);
+        setIsLoading(false);
       }
     }
 
@@ -36,9 +41,13 @@ const EventsPage = () => {
         </h1>
         <div className="w-[80%] h-1 md:h-[5px]  bg-[#853333]"></div>
       </div>
+
+      {/* <Loader /> */}
+
+      {isLoading ? (<Loader />) : (
       <div className="my-10 flex flex-col xl:flex-row xl:flex-wrap justify-between gap-5 md:gap-14 xl:gap-10">
           {data.map((post, index) => <EventCard post={post} isNotFirst={index !== 0} key={post._id} />)}
-      </div>
+      </div>)}
     </div>
   );
 };
