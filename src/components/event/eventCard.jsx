@@ -1,9 +1,19 @@
+import { useNavigate } from "react-router-dom";
 import { urlFor } from "../../lib/sanity";
+import { ROUTE_EVENT_DETAILS } from "../../constants/routes";
+
 
 export default function EventCard({ post, isNotFirst }) {
+
+    const navigate = useNavigate();
+
+    const goToEventDetails = () => {
+        navigate(`${ROUTE_EVENT_DETAILS.replace(":id", post._id)}`);
+    }
+
     return (
-        <div
-            className={`relative h-64 md:h-[500px] xl:h-[300px] rounded-3xl ${isNotFirst ? 'xl:w-[47%]' : 'xl:w-full'}`}
+        <button onClick={goToEventDetails}
+            className={`relative text-left h-64 md:h-[500px] xl:h-[300px] rounded-3xl ${isNotFirst ? 'xl:w-[47%]' : 'xl:w-full'}`}
             style={{
                 backgroundImage: `url(${urlFor(post.titleImage).url()})`,
                 backgroundPosition: 'center',
@@ -24,7 +34,6 @@ export default function EventCard({ post, isNotFirst }) {
                     {post.Date}
                 </h2>
             </div>
-
-        </div>
+        </button>
     );
 }
