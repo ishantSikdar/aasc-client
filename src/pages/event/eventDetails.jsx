@@ -115,7 +115,7 @@ export default function EventDetails() {
                         <div className='w-[30%] h-1 md:h-[5px] bg-[#853333]'></div>
                     </div>
                     {/* Other Events */}
-                    <div className="flex flex-col xl:flex-row xl:overflow-x-auto mt-5 gap-2 md:gap-10 md:mb-20">
+                    <div className="flex flex-col xl:flex-row xl:overflow-x-auto mt-5 gap-2 md:gap-10 mb-20">
                         {isOtherEventLoading ? <Loader /> : (
                             otherEvents.map((event) => <EventCard post={event} key={event._id} isNotFirst={true} />))}
                     </div>
