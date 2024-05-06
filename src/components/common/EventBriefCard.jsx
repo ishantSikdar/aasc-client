@@ -1,10 +1,24 @@
-export default function EventBriefCard() {
+import { useNavigate } from "react-router-dom";
+import { urlFor } from "../../lib/sanity";
+import { ROUTE_EVENT_DETAILS } from "../../constants/routes";
+
+export default function EventBriefCard({ event }) {
+    const navigate = useNavigate();
+
+    const goToEventDetails = () => {
+        navigate(`${ROUTE_EVENT_DETAILS.replace(":id", event._id)}`);
+        navigate(0);
+    }
+
     return (
-        <div className="relative w-[90%] md:w-[350px] h-[300px] overflow-hidden group">
-            <img alt="" className="absolute w-full h-full object-cover" src="./image.png" />
-            <p className="absolute -bottom-10 right-2 text-4xl text-white font-bold transition-bottom duration-300 group-hover:bottom-1">
-                Lorem Ipsum
-            </p>
-        </div>
+        <button onClick={goToEventDetails} className="w-full h-full">
+            <div className="relative w-full md:w-[450px] h-[300px] ">
+                <img alt="" className="absolute w-full h-full object-cover" src={urlFor(event.titleImage).url()} />
+
+                <p className="absolute text-center bottom-4 text-3xl text-white bg-black/[0.5] p-3 w-full font-bold overflow-hidden text-nowrap text-ellipsis">
+                    {event.title}
+                </p>
+            </div>
+        </button>
     );
 }
