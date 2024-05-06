@@ -10,6 +10,7 @@ export default function EventCard({ post, isNotFirst }) {
 
     const goToEventDetails = () => {
         navigate(`${ROUTE_EVENT_DETAILS.replace(":id", post._id)}`);
+        navigate(0);
     }
 
     useEffect(() => {
@@ -30,7 +31,7 @@ export default function EventCard({ post, isNotFirst }) {
         >
             <div
                 className="absolute inset-0 rounded-3xl"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }} 
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
             ></div>
 
             <div className="absolute bottom-5 left-5 md:bottom-8 md:left-10 flex flex-col gap-1 md:gap-2 text-white w-[80%]">
