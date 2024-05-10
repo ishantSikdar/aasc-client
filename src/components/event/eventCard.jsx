@@ -12,7 +12,7 @@ export default function EventCard({ post, isNotFirst }) {
         navigate(`${ROUTE_EVENT_DETAILS.replace(":id", post._id)}`);
         navigate(0);
     }
-
+    
     useEffect(() => {
         if (lineRef.current) {
             const titleLength = post.title.length;

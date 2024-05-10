@@ -17,3 +17,6 @@ export interface FullEvent {
   Link: string,
   venue: string,
 }
+
+
+
