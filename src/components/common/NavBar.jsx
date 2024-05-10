@@ -128,13 +128,13 @@ export default function NavBar({ isMobile }) {
             >
               Events
             </Link>
-            <Link
+            {/* <Link
               to={ROUTE_GALLERY}
               onClick={closeMobileMenu}
               className="border-b-[1pt] border-[#252525] p-2"
             >
               Gallery
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}
