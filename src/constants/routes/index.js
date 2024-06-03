@@ -4,15 +4,17 @@ import AascCouncilPage from "../../pages/aascCouncil";
 import HomePage from "../../pages/home";
 import EventsPage from "../../pages/event/eventsList";
 import EventDetails from "../../pages/event/eventDetails";
+import AascCommitteePage from "../../pages/alumniCommittee";
 
 
 export const ROUTE_HOME = "/";
 export const ROUTE_ABOUT = "/about";
 export const ROUTE_EXE_COUNCIL = "/exe-council";
 export const ROUTE_AASC_COUNCIL = "/aasc-council";
+export const ROUTE_AASC_COMMITTEE = "/aasc-committee";
 export const ROUTE_EVENTS = "/events";
 export const ROUTE_GALLERY = "/gallery";
-export const ROUTE_EVENT_DETAILS = "/events/:id"
+export const ROUTE_EVENT_DETAILS = "/events/:id";
 export const ROUTE_ANY = "*";
 
 export const APP_ROUTES = [
@@ -46,4 +48,9 @@ export const APP_ROUTES = [
     path: ROUTE_EVENT_DETAILS,
     element: EventDetails,
   },
+  {
+    id: 7,
+    path: ROUTE_AASC_COMMITTEE,
+    element: AascCommitteePage,
+  }
 ];

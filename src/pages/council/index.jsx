@@ -1,4 +1,4 @@
-import CouncilPage from "../../components/council/eCouncil";
+import CouncilPage from "../../components/team/eCouncil";
 
 export default function ExeCouncil({ isMobile }) {
   return (

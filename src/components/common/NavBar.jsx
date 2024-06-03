@@ -6,6 +6,7 @@ import {
   ROUTE_GALLERY,
   ROUTE_HOME,
   ROUTE_AASC_COUNCIL,
+  ROUTE_AASC_COMMITTEE,
 } from "../../constants/routes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -64,8 +65,10 @@ export default function NavBar({ isMobile }) {
             {!isMobile && showCouncil && (
               <div className="absolute p-3 w-52 flex flex-col gap-2 shadow-md bg-white top-10 right-[-75%] text-sm">
                 <Link to={ROUTE_EXE_COUNCIL}>Executive Council</Link>
-                <div className="w-full h-[1pt] bg-[#252525]"></div>
+                <div className="w-full h-[0.5pt] bg-[#252525]"></div>
                 <Link to={ROUTE_AASC_COUNCIL}>AASC Council</Link>
+                <div className="w-full h-[0.5pt] bg-[#252525]"></div>
+                <Link to={ROUTE_AASC_COMMITTEE}>AASC Committee</Link>
               </div>
             )}
           </button>

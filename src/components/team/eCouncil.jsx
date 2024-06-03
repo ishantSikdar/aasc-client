@@ -1,4 +1,4 @@
-import aaec from "../../constants/executiveCommittee/aaecData.json";
+import aaec from "../../constants/teamData/aaecData.json";
 
 export default function CouncilPage() {
   const firstFour = aaec.filter((aaecData) => {
