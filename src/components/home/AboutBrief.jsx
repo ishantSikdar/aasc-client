@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import { ROUTE_ABOUT } from "../../constants/routes";
+import { Link } from 'react-router-dom'
+import { ROUTE_ABOUT } from '../../constants/routes'
+// import { motion } from 'framer-motion'
 
 export default function AboutBrief({ isMobile }) {
   return (
