@@ -1,7 +1,9 @@
-import AlumniCommittee from "../../components/team/aascCommittee";
+import AlumniCommittee from '../../components/team/aascCommittee'
 
 export default function AascCommitteePage() {
-    return <div>
+  return (
+    <div>
       <AlumniCommittee />
     </div>
+  )
 }

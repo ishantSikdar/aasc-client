@@ -1,11 +1,17 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
+@layer base {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  html {
+    scrollbar-width: thin; /* Options: auto, thin, none */
+    scrollbar-color: #00000090 #7c838950; /* scrollbar-color: thumb color, track color */
+  }
 }
