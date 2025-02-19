@@ -30,7 +30,7 @@ export default function HeroSection() {
         className='z-10 text-center'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.5, delay: 0.5 }}
       >
         {/* Subtitle */}
         <motion.div

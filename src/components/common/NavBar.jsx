@@ -137,9 +137,9 @@ export default function NavBar({ isMobile }) {
         {isMobile && (
           <button onClick={toggleMobileMenu} className={`z-10 text-black`}>
             {!showMenu ? (
-              <FontAwesomeIcon icon={faBars} size='xl' />
+              <FontAwesomeIcon icon={faBars} size='xl' color={scrollY.get() < innerHeightThreshold ? '#FFFFFF90': '#000'}/>
             ) : (
-              <FontAwesomeIcon icon={faXmark} size='xl' />
+              <FontAwesomeIcon icon={faXmark} size='xl'color={scrollY.get() < innerHeightThreshold ? '#FFFFFF90': '#000'} />
             )}
           </button>
         )}
