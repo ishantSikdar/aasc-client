@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import { urlFor } from '../../lib/sanity'
 import { ROUTE_EVENT_DETAILS } from '../../constants/routes'
+import { motion } from 'framer-motion'
 
-export default function EventBriefCard({ event }) {
+export default function EventBriefCard({ idx, event }) {
   const navigate = useNavigate()
 
   const goToEventDetails = () => {
@@ -11,7 +12,14 @@ export default function EventBriefCard({ event }) {
   }
 
   return (
-    <button onClick={goToEventDetails} className='w-full h-full'>
+    <motion.button
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.3, delay: 0.2 * (idx + 1) }}
+      viewport={{ once: false }}
+      onClick={goToEventDetails}
+      className='w-full h-full'
+    >
       <div className='relative w-full md:w-[450px] h-[300px] '>
         <img
           alt=''
@@ -23,6 +31,6 @@ export default function EventBriefCard({ event }) {
           {event.title}
         </p>
       </div>
-    </button>
+    </motion.button>
   )
 }

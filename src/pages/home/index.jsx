@@ -6,8 +6,18 @@ export default function HomePage({ isMobile }) {
   return (
     <>
       <HeroSection />
-      <AboutBrief isMobile={isMobile} />
-      <EventsBrief isMobile={isMobile} />
+      <div
+        className='relative'
+        style={{
+          backgroundImage: `url('/about_brief.png')`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+        }}
+      >
+        <div className='absolute inset-0 bg-black/70 backdrop-blur-md' /> 
+        <AboutBrief isMobile={isMobile} />
+        <EventsBrief isMobile={isMobile} />
+      </div>
     </>
   )
 }

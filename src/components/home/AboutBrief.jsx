@@ -4,16 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function AboutBrief({ isMobile }) {
   return (
-    <div
-      className='flex relative justify-between items-center overflow-hidden py-10 md:py-32 px-5'
-      style={{
-        backgroundImage: `url('/about_brief.png')`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-      }}
-    >
-      <div className='absolute inset-0 bg-black/70 backdrop-blur-md' />
-
+    <div className='flex relative justify-between items-center overflow-hidden py-10 px-5'>
       <div className='my-auto z-10 text-white p-10 flex flex-col gap-3'>
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
