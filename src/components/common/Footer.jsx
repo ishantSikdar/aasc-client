@@ -17,7 +17,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className='bg-[#272727] text-white text-md md:text-xl'>
+    <div className='bg-[#272727] z-50 text-white text-md md:text-xl'>
       {/* Upper container */}
       <div className='flex md:flex-row justify-between xl:justify-around p-9 md:py-10 xl:pb-0'>
         {/* Left Upper */}

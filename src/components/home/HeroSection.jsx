@@ -11,7 +11,15 @@ export default function HeroSection() {
       }}
     >
       <div
-        className='absolute inset-0 bg-black opacity-100 pointer-events-none'
+        className='fixed inset-0 -z-10'
+        style={{
+          backgroundImage: 'url("/college.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+      <div
+        className='fixed inset-0 -z-10 bg-black opacity-100 pointer-events-none'
         style={{
           background:
             'radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%)',
@@ -20,7 +28,7 @@ export default function HeroSection() {
 
       {/* Overlay div to darken the background image */}
       <motion.div
-        className='absolute inset-0 bg-black'
+        className='fixed inset-0 bg-black'
         initial={{ opacity: 1 }}
         animate={{ opacity: 0.7 }}
         transition={{ duration: 2, ease: 'easeOut' }}

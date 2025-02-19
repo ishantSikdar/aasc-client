@@ -27,7 +27,7 @@ export default function NavBar({ isMobile }) {
     setIsVisible(current < 10 || current < scrollY.getPrevious())
 
     if (showMenu) {
-      setShowMenu(current < 10 || current < scrollY.getPrevious())
+      setShowMenu(false)
     }
   })
 
@@ -72,7 +72,7 @@ export default function NavBar({ isMobile }) {
               src='/aascLogoMSI-no-bg.png'
               alt='Alumni Association'
               className={cn(
-                'h-12 md:h-16 p-2 px-6 rounded-full transition-colors duration-300 ease-in-out',
+                'h-12 md:h-16 p-2 px-3 overflow-visible md:px-6 rounded-full transition-colors duration-300 ease-in-out',
                 scrollY.get() < innerHeightThreshold
                   ? 'bg-white/40'
                   : 'bg-transparent'
@@ -137,9 +137,21 @@ export default function NavBar({ isMobile }) {
         {isMobile && (
           <button onClick={toggleMobileMenu} className={`z-10 text-black`}>
             {!showMenu ? (
-              <FontAwesomeIcon icon={faBars} size='xl' color={scrollY.get() < innerHeightThreshold ? '#FFFFFF90': '#000'}/>
+              <FontAwesomeIcon
+                icon={faBars}
+                size='xl'
+                color={
+                  scrollY.get() < innerHeightThreshold ? '#FFFFFF90' : '#000'
+                }
+              />
             ) : (
-              <FontAwesomeIcon icon={faXmark} size='xl'color={scrollY.get() < innerHeightThreshold ? '#FFFFFF90': '#000'} />
+              <FontAwesomeIcon
+                icon={faXmark}
+                size='xl'
+                color={
+                  scrollY.get() < innerHeightThreshold ? '#FFFFFF90' : '#000'
+                }
+              />
             )}
           </button>
         )}

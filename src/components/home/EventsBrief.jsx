@@ -39,7 +39,7 @@ export default function EventsBrief({ isMobile }) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: false }}
-          className='text-center text-4xl text-white font-bold uppercase m-5'
+          className='text-center text-4xl font-bold uppercase m-5'
         >
           Events
         </motion.h2>
