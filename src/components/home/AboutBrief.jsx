@@ -3,16 +3,32 @@ import { ROUTE_ABOUT } from "../../constants/routes";
 
 export default function AboutBrief({ isMobile }) {
   return (
-    <div className="flex xl:h-screen justify-between items-center overflow-hidden">
-      {/* Render this div only on tablet and desktop screens */}
-      {!isMobile && <img src="/about_brief.png" alt="About" className="h-full" />}
+    <div className="flex flex-col xl:flex-row items-center xl:h-screen px-6 md:px-12 lg:px-20 xl:px-28 py-12 bg-gray-100">
+      {/* Image on left for larger screens */}
+      {!isMobile && (
+        <div className="hidden xl:flex w-1/2 justify-center">
+          <img src="/about_brief.png" alt="About" className="max-w-md xl:max-w-lg rounded-lg shadow-lg" />
+        </div>
+      )}
 
-      <div className="my-auto md:w-[50%] bg-white p-10 flex flex-col gap-3">
-        <h2 className="uppercase font-bold text-2xl md:text-3xl xl:text-4xl">About the Alumni Association</h2>
-        <p className="font-light text-sm md:text-md xl:text-lg text-justify">
-          The Alumni Association has been created with the vision of fostering lifelong connections and celebrating the achievements of our esteemed alumni. We serve as a bridge between past, present, and future, providing a platform for networking, mentorship, and professional growth. We endeavour to foster the legacy of our alma mater while also championing the diverse accomplishments of our alumni.
+      {/* Content Section */}
+      <div className="w-full xl:w-1/2 bg-white p-8 md:p-12 rounded-lg shadow-lg">
+        <h2 className="uppercase font-bold text-3xl md:text-4xl xl:text-5xl text-gray-900 mb-4">
+          About the Alumni Association
+        </h2>
+        <p className="text-gray-700 text-sm md:text-md xl:text-lg leading-relaxed">
+          The Alumni Association fosters lifelong connections and celebrates the achievements of our alumni.
+          Serving as a bridge between past, present, and future, we provide a platform for networking,
+          mentorship, and professional growth while honoring our alma mater’s legacy.
         </p>
-        <Link to={ROUTE_ABOUT} className="uppercase underline text-[#4b39b5] font-bold">Read More</Link>
+        <div className="mt-6">
+          <Link
+            to={ROUTE_ABOUT}
+            className="inline-block bg-[#4b39b5] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#372b8b] transition duration-300"
+          >
+            Read More
+          </Link>
+        </div>
       </div>
     </div>
   );
