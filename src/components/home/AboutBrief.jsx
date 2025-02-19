@@ -1,32 +1,57 @@
 import { Link } from 'react-router-dom'
 import { ROUTE_ABOUT } from '../../constants/routes'
+import { motion } from 'framer-motion'
 
 export default function AboutBrief({ isMobile }) {
   return (
-    <div className='flex xl:h-screen justify-between items-center overflow-hidden'>
-      {/* Render this div only on tablet and desktop screens */}
-      {!isMobile && (
-        <img src='/about_brief.png' alt='About' className='h-full' />
-      )}
+    <div
+      className='flex relative justify-between items-center overflow-hidden py-10 md:py-32 px-5'
+      style={{
+        backgroundImage: `url('/about_brief.png')`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }}
+    >
+      <div className='absolute inset-0 bg-black/70 backdrop-blur-md' />
 
-      <div className='my-auto md:w-[50%] bg-white p-10 flex flex-col gap-3'>
-        <h2 className='uppercase font-bold text-2xl md:text-3xl xl:text-4xl'>
+      <div className='my-auto z-10 text-white p-10 flex flex-col gap-3'>
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false }}
+          className='uppercase font-bold text-2xl md:text-3xl xl:text-4xl'
+        >
           About the Alumni Association
-        </h2>
-        <p className='font-light text-sm md:text-md xl:text-lg text-justify'>
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+          viewport={{ once: false }}
+          className='font-light text-sm md:text-md xl:text-lg text-left'
+        >
           The Alumni Association has been created with the vision of fostering
           lifelong connections and celebrating the achievements of our esteemed
           alumni. We serve as a bridge between past, present, and future,
           providing a platform for networking, mentorship, and professional
           growth. We endeavour to foster the legacy of our alma mater while also
           championing the diverse accomplishments of our alumni.
-        </p>
-        <Link
-          to={ROUTE_ABOUT}
-          className='uppercase underline text-[#4b39b5] font-bold'
+        </motion.p>
+
+        <motion.span
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.3, delay: 0.4 }}
         >
-          Read More
-        </Link>
+          <Link
+            to={ROUTE_ABOUT}
+            className='uppercase underline text-[#4b39b5] font-bold'
+          >
+            Read More
+          </Link>
+        </motion.span>
       </div>
     </div>
   )

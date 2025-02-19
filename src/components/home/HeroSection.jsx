@@ -30,14 +30,15 @@ export default function HeroSection() {
         className='z-10 text-center'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.5 }}
+        transition={{ duration: 1.5, delay: 0.2 }}
       >
         {/* Subtitle */}
         <motion.div
           className='uppercase font-medium text-lg md:text-2xl'
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false }}
         >
           Welcome to the
         </motion.div>
@@ -46,8 +47,9 @@ export default function HeroSection() {
         <motion.h1
           className='uppercase font-bold text-3xl md:text-5xl lg:text-6xl my-2 md:my-3'
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.4 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+          viewport={{ once: false }}
         >
           Alumni Association
         </motion.h1>
@@ -56,8 +58,9 @@ export default function HeroSection() {
         <motion.p
           className='text-sm md:text-lg leading-5 mx-5 lg:mx-40'
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, delay: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3, delay: 0.4 }}
+          viewport={{ once: false }}
         >
           The Alumni Association of Maharaja Surajmal Institute aims at
           engaging, reminiscing and reconnecting with the fellow alumni of this
