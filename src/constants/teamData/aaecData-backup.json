@@ -1,59 +1,58 @@
 [
-    {
-        "id": "1",
-        "name": "Sh. Kaptan Singh",
-        "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
-        "designation": "Chairman (EX Officio)",
-        "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit. Timeam referrentur signiferumque mel ne. Legimus facilis ex duo, eros platonem adipiscing pro ad, an vim vide nihil aliquid. Exerci propriae his ex, wisi virtute sit ex. At ubique indoctum repudiandae eos, fabulas vocibus perfecto ex per.\n\nPer et sale causae labitur. Ei iisque prompta fabulas vel, vide inani ut ius. An eam dico albucius delicata, eu sed sonet omnium detracto. Minimum appetere voluptaria mel ut, ex mel liber pertinacia, cum te nonumes repudiare. Eos facer elaboraret ullamcorper eu, ne quas veniam nec, diam offendit his in."
-    },
-    {
-        "id": "2",
-        "name": "Dr. Promila Dabas",
-        "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
-        "designation": "President",
-        "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit. Timeam referrentur signiferumque mel ne. Legimus facilis ex duo, eros platonem adipiscing pro ad, an vim vide nihil aliquid. Exerci propriae his ex, wisi virtute sit ex. At ubique indoctum repudiandae eos, fabulas vocibus perfecto ex per.\n\nPer et sale causae labitur. Ei iisque prompta fabulas vel, vide inani ut ius. An eam dico albucius delicata, eu sed sonet omnium detracto. Minimum appetere voluptaria mel ut, ex mel liber pertinacia, cum te nonumes repudiare. Eos facer elaboraret ullamcorper eu, ne quas veniam nec, diam offendit his in."
-    },
-    {
-        "id": "3",
-        "name": "Dr. Harish Singh",
-        "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
-        "designation": "Vice President (EX Officio)",
-        "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit. Timeam referrentur signiferumque mel ne. Legimus facilis ex duo, eros platonem adipiscing pro ad, an vim vide nihil aliquid. Exerci propriae his ex, wisi virtute sit ex. At ubique indoctum repudiandae eos, fabulas vocibus perfecto ex per.\n\nPer et sale causae labitur. Ei iisque prompta fabulas vel, vide inani ut ius. An eam dico albucius delicata, eu sed sonet omnium detracto. Minimum appetere voluptaria mel ut, ex mel liber pertinacia, cum te nonumes repudiare. Eos facer elaboraret ullamcorper eu, ne quas veniam nec, diam offendit his in."
-    },
-    {
-        "id": "4",
-        "name": "Mr. Swetabh Suman",
-        "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
-        "designation": "General Secretary",
-        "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit. Timeam referrentur signiferumque mel ne. Legimus facilis ex duo, eros platonem adipiscing pro ad, an vim vide nihil aliquid. Exerci propriae his ex, wisi virtute sit ex. At ubique indoctum repudiandae eos, fabulas vocibus perfecto ex per.\n\nPer et sale causae labitur. Ei iisque prompta fabulas vel, vide inani ut ius. An eam dico albucius delicata, eu sed sonet omnium detracto. Minimum appetere voluptaria mel ut, ex mel liber pertinacia, cum te nonumes repudiare. Eos facer elaboraret ullamcorper eu, ne quas veniam nec, diam offendit his in."
-    },
-    {
-        "id": "5", 
-        "name": "Ms. Kirti Sharma",
-        "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
-        "designation": "Executive Member",
-        "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit."
-    },
-    {
-        "id": "6",
-        "name": "Ms. Avika Sood",
-        "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
-        "designation": "Executive Member",
-        "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit."
-    },
-    {
-        "id": "7",
-        "name": "Mr. Bhavesh Diwan",
-        "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
-        "designation": "Executive Member",
-        "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit."
-    },
-    {
-        "id": "8",
-        "name": "Mr. Chirag Pruthi",
-        "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
-        "designation": "Executive Member",
-        "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit."
-    }
-
+  {
+    "id": "1",
+    "name": "Sh. Kaptan Singh",
+    "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
+    "designation": "Chairman (EX Officio)",
+    "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit. Timeam referrentur signiferumque mel ne. Legimus facilis ex duo, eros platonem adipiscing pro ad, an vim vide nihil aliquid. Exerci propriae his ex, wisi virtute sit ex. At ubique indoctum repudiandae eos, fabulas vocibus perfecto ex per.\n\nPer et sale causae labitur. Ei iisque prompta fabulas vel, vide inani ut ius. An eam dico albucius delicata, eu sed sonet omnium detracto. Minimum appetere voluptaria mel ut, ex mel liber pertinacia, cum te nonumes repudiare. Eos facer elaboraret ullamcorper eu, ne quas veniam nec, diam offendit his in."
+  },
+  {
+    "id": "2",
+    "name": "Dr. Promila Dabas",
+    "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
+    "designation": "President",
+    "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit. Timeam referrentur signiferumque mel ne. Legimus facilis ex duo, eros platonem adipiscing pro ad, an vim vide nihil aliquid. Exerci propriae his ex, wisi virtute sit ex. At ubique indoctum repudiandae eos, fabulas vocibus perfecto ex per.\n\nPer et sale causae labitur. Ei iisque prompta fabulas vel, vide inani ut ius. An eam dico albucius delicata, eu sed sonet omnium detracto. Minimum appetere voluptaria mel ut, ex mel liber pertinacia, cum te nonumes repudiare. Eos facer elaboraret ullamcorper eu, ne quas veniam nec, diam offendit his in."
+  },
+  {
+    "id": "3",
+    "name": "Dr. Harish Singh",
+    "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
+    "designation": "Vice President (EX Officio)",
+    "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit. Timeam referrentur signiferumque mel ne. Legimus facilis ex duo, eros platonem adipiscing pro ad, an vim vide nihil aliquid. Exerci propriae his ex, wisi virtute sit ex. At ubique indoctum repudiandae eos, fabulas vocibus perfecto ex per.\n\nPer et sale causae labitur. Ei iisque prompta fabulas vel, vide inani ut ius. An eam dico albucius delicata, eu sed sonet omnium detracto. Minimum appetere voluptaria mel ut, ex mel liber pertinacia, cum te nonumes repudiare. Eos facer elaboraret ullamcorper eu, ne quas veniam nec, diam offendit his in."
+  },
+  {
+    "id": "4",
+    "name": "Mr. Swetabh Suman",
+    "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
+    "designation": "General Secretary",
+    "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit. Timeam referrentur signiferumque mel ne. Legimus facilis ex duo, eros platonem adipiscing pro ad, an vim vide nihil aliquid. Exerci propriae his ex, wisi virtute sit ex. At ubique indoctum repudiandae eos, fabulas vocibus perfecto ex per.\n\nPer et sale causae labitur. Ei iisque prompta fabulas vel, vide inani ut ius. An eam dico albucius delicata, eu sed sonet omnium detracto. Minimum appetere voluptaria mel ut, ex mel liber pertinacia, cum te nonumes repudiare. Eos facer elaboraret ullamcorper eu, ne quas veniam nec, diam offendit his in."
+  },
+  {
+    "id": "5",
+    "name": "Ms. Kirti Sharma",
+    "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
+    "designation": "Executive Member",
+    "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit."
+  },
+  {
+    "id": "6",
+    "name": "Ms. Avika Sood",
+    "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
+    "designation": "Executive Member",
+    "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit."
+  },
+  {
+    "id": "7",
+    "name": "Mr. Bhavesh Diwan",
+    "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
+    "designation": "Executive Member",
+    "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit."
+  },
+  {
+    "id": "8",
+    "name": "Mr. Chirag Pruthi",
+    "img": "https://thumbs.dreamstime.com/b/christmas-star-background-6396494.jpg",
+    "designation": "Executive Member",
+    "description": "Lorem ipsum dolor sit amet, velit habemus duo te, aperiri vivendum cotidieque id est. Mel no platonem salutatus concludaturque, cu nihil tempor sit."
+  }
 ]
