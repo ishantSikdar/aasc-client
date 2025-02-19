@@ -2,14 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function HeroSection() {
   return (
-    <div
-      className='h-screen text-white flex justify-center items-center text-center relative'
-      style={{
-        backgroundImage: 'url("/college.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+    <div className='h-screen text-white flex justify-center items-center text-center relative'>
       <div
         className='fixed inset-0 -z-10'
         style={{

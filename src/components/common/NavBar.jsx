@@ -55,7 +55,7 @@ export default function NavBar({ isMobile }) {
         className={cn(
           'z-50 fixed top-0 transition-all duration-300 ease-in-out left-0 right-0 flex justify-between  h-14 md:h-20 p-4',
           scrollY.get() > innerHeightThreshold
-            ? 'bg-white/40 text-black backdrop-blur-md shadow-lg'
+            ? 'bg-white/70 text-black backdrop-blur-md shadow-lg'
             : 'text-white'
         )}
       >
@@ -74,7 +74,7 @@ export default function NavBar({ isMobile }) {
               className={cn(
                 'h-12 md:h-16 p-2 px-3 overflow-visible md:px-6 rounded-full transition-colors duration-300 ease-in-out',
                 scrollY.get() < innerHeightThreshold
-                  ? 'bg-white/40'
+                  ? 'bg-white/70'
                   : 'bg-transparent'
               )}
             />
@@ -163,7 +163,7 @@ export default function NavBar({ isMobile }) {
           initial={{ x: '100%' }}
           animate={{ x: showMenu ? 0 : '100%' }}
           transition={{ duration: 0.3 }}
-          className='fixed top-0 z-40 right-0 bottom-0 opacity-100 bg-white/40 backdrop-blur-md w-56 z-5 shadow-md overflow-y-auto transform transition-transform'
+          className='fixed top-0 z-40 right-0 bottom-0 opacity-100 bg-white/70 backdrop-blur-md w-56 z-5 shadow-md overflow-y-auto transform transition-transform'
         >
           <div className='mt-20 flex flex-col gap-1 text-right p-4 font-light uppercase text-lg'>
             <Link
