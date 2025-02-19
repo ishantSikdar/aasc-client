@@ -7,6 +7,7 @@ import NotFoundPage from './pages/common/NotFoundPage'
 import NavBar from './components/common/NavBar'
 import Footer from './components/common/Footer'
 import BackToTop from './components/common/BackToTop'
+import Lenis from '@studio-freight/lenis'
 
 function App() {
   const [isMobile, setIsMobile] = useState(false)
@@ -15,6 +16,13 @@ function App() {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768)
     }
+
+    const lenis = new Lenis()
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
 
     handleResize()
     window.addEventListener('resize', handleResize)
