@@ -10,8 +10,7 @@ export default function HeroSection() {
 		>
 			{/* Overlay div to darken the background image */}
 			<div
-				className="absolute inset-0"
-				style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }} // Adjust opacity here
+				className="absolute inset-0 bg-black/70"
 			></div>
 
 			<div className="z-10">

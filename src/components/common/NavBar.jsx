@@ -10,12 +10,17 @@ import {
 } from "../../constants/routes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./navbar.css";
+import { cn } from '../../utils/utils'
 
 export default function NavBar({ isMobile }) {
   const [showMenu, setShowMenu] = useState(false);
   const [showCouncil, setShowCouncil] = useState(false);
+  const innerHeightThreshold = 100
+
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMobileMenu = () => {
     setShowMenu((prevState) => !prevState);
@@ -29,37 +34,58 @@ export default function NavBar({ isMobile }) {
     setShowCouncil((prev) => !prev);
   };
 
+  
+  useEffect(() => {
+    const scrollThreshold = 50;
+    const handleScroll = () => {
+      const currentScrollY = scrollY;
+
+      if (Math.abs(currentScrollY - lastScrollY) < scrollThreshold) {
+        return; 
+      }
+
+      setIsVisible(currentScrollY < lastScrollY || currentScrollY < 10);
+      setLastScrollY(currentScrollY);
+    };
+
+    addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <div className="z-50 fixed top-0 left-0 right-0 flex justify-between bg-white shadow-xl text-black h-16 md:h-20 opacity-90 p-4">
+    <div className={cn("z-50 fixed top-0 transition-all duration-300 ease-in-out left-0 right-0 flex justify-between  h-14 md:h-20 p-4",
+      !isVisible ? '-translate-y-[100%]' : 'translate-y-0',
+      scrollY > innerHeightThreshold ? 'bg-white/40 text-black backdrop-blur-md shadow-lg': 'text-white'
+    )}>
       <div className="flex gap-2 lg:gap-4 items-center">
-        <a href="https://www.msijanakpuri.com/" target="_blank">
+        {/* <a href="https://www.msijanakpuri.com/" target="_blank">
           <img
-            src="/msiLogo.jpg"
+            src="/msiLogo.png"
             alt="Alumni Association"
             className="h-12 md:h-16"
           />
-        </a>
+        </a> */}
         <Link to={ROUTE_HOME} onClick={closeMobileMenu}>
           <img
-            src="/aascLogoMSI.png"
+            src="/aascLogoMSI-no-bg.png"
             alt="Alumni Association"
-            className="h-12 md:h-16"
+            className={cn("h-12 md:h-16 p-2 px-6 rounded-full transition-colors duration-300 ease-in-out", scrollY < innerHeightThreshold ? 'bg-white/70' : 'bg-transparent')}
           />
         </Link>
       </div>
 
       {/* For Tab/Desktop screen */}
       {!isMobile && (
-        <div className="relative flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-md font-light uppercase">
-          <Link className="underline-animate" to={ROUTE_HOME}>
+        <div className="relative flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-sm font-light uppercase">
+          <Link className={cn("underline-animate", scrollY < innerHeightThreshold ? 'after:bg-white': '')} to={ROUTE_HOME}>
             Home
           </Link>
-          <Link className="underline-animate" to={ROUTE_ABOUT}>
+          <Link className={cn("underline-animate", scrollY < innerHeightThreshold ? 'after:bg-white': '')} to={ROUTE_ABOUT}>
             About Us
           </Link>
           <button
             onClick={toggleCouncil}
-            className="relative uppercase underline-animate"
+            className={cn("relative uppercase underline-animate", scrollY < innerHeightThreshold ? 'after:bg-white': '')}
           >
             Council
             {!isMobile && showCouncil && (
@@ -72,7 +98,7 @@ export default function NavBar({ isMobile }) {
               </div>
             )}
           </button>
-          <Link className="underline-animate" to={ROUTE_EVENTS}>
+          <Link className={cn("underline-animate", scrollY < innerHeightThreshold ? 'after:bg-white': '')} to={ROUTE_EVENTS}>
             Events
           </Link>
           {/* <Link className="underline-animate" to={ROUTE_GALLERY}>Gallery</Link> */}
