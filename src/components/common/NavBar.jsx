@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import {
   ROUTE_ABOUT,
   ROUTE_EXE_COUNCIL,
@@ -7,29 +7,28 @@ import {
   ROUTE_HOME,
   ROUTE_AASC_COUNCIL,
   ROUTE_AASC_COMMITTEE,
+  APP_ROUTES,
 } from '../../constants/routes'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import './navbar.css'
 import { cn } from '../../utils/utils'
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
 
 export default function NavBar({ isMobile }) {
+  const location = useLocation()
   const [showMenu, setShowMenu] = useState(false)
   const [showCouncil, setShowCouncil] = useState(false)
   const innerHeightThreshold = 100
-
-  const [isVisible, setIsVisible] = useState(true)
   const { scrollY } = useScroll()
+  const [isVisible, setIsVisible] = useState(true)
 
-  useMotionValueEvent(scrollY, 'change', (current) => {
-    setIsVisible(current < 10 || current < scrollY.getPrevious())
-
-    if (showMenu) {
-      setShowMenu(false)
-    }
-  })
+  const isNotHome = useMemo(() => {
+    return APP_ROUTES.some(
+      (route) => route.id !== 1 && location.pathname.includes(route.path)
+    )
+  }, [location])
 
   const toggleMobileMenu = () => {
     setShowMenu((prevState) => !prevState)
@@ -43,6 +42,17 @@ export default function NavBar({ isMobile }) {
     setShowCouncil((prev) => !prev)
   }
 
+  useMotionValueEvent(scrollY, 'change', (current) => {
+    setIsVisible(current < 10 || current < scrollY.getPrevious())
+
+    if (showMenu) {
+      setShowMenu(false)
+    }
+  })
+
+  const opaqueNavbarClass = 'bg-white/70 text-black backdrop-blur-md shadow-lg'
+  const transparentNavbarClass = isNotHome ? 'text-black' : 'text-white'
+
   return (
     <>
       <motion.div
@@ -55,8 +65,8 @@ export default function NavBar({ isMobile }) {
         className={cn(
           'z-50 fixed top-0 transition-all duration-300 ease-in-out left-0 right-0 flex justify-between  h-14 md:h-20 p-4',
           scrollY.get() > innerHeightThreshold
-            ? 'bg-white/70 text-black backdrop-blur-md shadow-lg'
-            : 'text-white'
+            ? opaqueNavbarClass
+            : transparentNavbarClass
         )}
       >
         <div className='flex gap-2 lg:gap-4 items-center'>
@@ -111,7 +121,7 @@ export default function NavBar({ isMobile }) {
             >
               Council
               {!isMobile && showCouncil && (
-                <div className='absolute p-3 w-52 flex flex-col gap-2 shadow-md bg-white top-10 right-[-75%] text-sm'>
+                <div className='absolute p-3 w-52 flex flex-col gap-2 shadow-md bg-white text-black top-10 right-[-75%] text-sm'>
                   {/* <Link to={ROUTE_EXE_COUNCIL}>Executive Council</Link> */}
                   {/* <div className="w-full h-[0.5pt] bg-[#252525]"></div> */}
                   <Link to={ROUTE_AASC_COUNCIL}>AASC Council</Link>
