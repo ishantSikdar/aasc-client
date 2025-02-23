@@ -44,7 +44,7 @@ export default function EventsBrief({ isMobile }) {
           Events
         </motion.h2>
       )}
-      <div className='p-10 flex flex-col md:flex-row gap-10 justify-center items-center overflow-auto'>
+      <div className='m-10 pb-4 flex flex-col md:flex-row gap-10 overflow-x-auto overflow-y-hidden'>
         {isLoading ? (
           <Loader />
         ) : (

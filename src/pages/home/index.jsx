@@ -6,7 +6,7 @@ export default function HomePage({ isMobile }) {
   return (
     <div className='relative text-white'>
       <HeroSection />
-      <AboutBrief isMobile={isMobile} />
+      <AboutBrief />
       <EventsBrief isMobile={isMobile} />
     </div>
   )

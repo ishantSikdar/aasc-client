@@ -12,9 +12,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useMemo, useState } from 'react'
-import './navbar.css'
-import { cn } from '../../utils/utils'
+import { cn, hoverLinkClasses } from '../../utils/utils'
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
+import useIsHomePage from '../../hooks/isPageHome'
 
 export default function NavBar({ isMobile }) {
   const location = useLocation()
@@ -23,12 +23,7 @@ export default function NavBar({ isMobile }) {
   const innerHeightThreshold = 100
   const { scrollY } = useScroll()
   const [isVisible, setIsVisible] = useState(true)
-
-  const isNotHome = useMemo(() => {
-    return APP_ROUTES.some(
-      (route) => route.id !== 1 && location.pathname.includes(route.path)
-    )
-  }, [location])
+  const { isHome } = useIsHomePage()
 
   const toggleMobileMenu = () => {
     setShowMenu((prevState) => !prevState)
@@ -50,24 +45,22 @@ export default function NavBar({ isMobile }) {
     }
   })
 
-  const opaqueNavbarClass = 'bg-white/70 text-black backdrop-blur-md shadow-lg'
-  const transparentNavbarClass = isNotHome ? 'text-black' : 'text-white'
+  const NavLink = ({ route, label }) => (
+    <Link className={cn(hoverLinkClasses, 'before:bg-black')} to={route}>
+      {label}
+    </Link>
+  )
 
   return (
     <>
       <motion.div
-        initial={{ y: 0 }}
+        initial={{ y: '-100%' }}
         animate={{ y: isVisible ? 0 : '-100%' }}
         transition={{
-          duration: 0.3,
+          duration: 0.5,
           ease: 'easeInOut',
         }}
-        className={cn(
-          'z-50 fixed top-0 transition-all duration-300 ease-in-out left-0 right-0 flex justify-between  h-14 md:h-20 p-4',
-          scrollY.get() > innerHeightThreshold
-            ? opaqueNavbarClass
-            : transparentNavbarClass
-        )}
+        className='z-50 fixed top-0 transition-all text-black duration-300 ease-in-out left-0 right-0 flex justify-between items-center h-14 md:h-20 p-4'
       >
         <div className='flex gap-2 lg:gap-4 items-center'>
           {/* <a href="https://www.msijanakpuri.com/" target="_blank">
@@ -81,65 +74,19 @@ export default function NavBar({ isMobile }) {
             <img
               src='/aascLogoMSI-no-bg.png'
               alt='Alumni Association'
-              className={cn(
-                'h-12 md:h-16 p-2 px-3 overflow-visible md:px-6 rounded-full transition-colors duration-300 ease-in-out',
-                scrollY.get() < innerHeightThreshold
-                  ? 'bg-white/70'
-                  : 'bg-transparent'
-              )}
+              className='h-12 md:h-16 p-2 bg-white/50 backdrop-blur-md px-3 overflow-visible md:px-6 rounded-full transition-colors duration-300 ease-in-out'
             />
           </Link>
         </div>
 
         {/* For Tab/Desktop screen */}
         {!isMobile && (
-          <div className='relative flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-sm font-light uppercase'>
-            <Link
-              className={cn(
-                'underline-animate',
-                scrollY < innerHeightThreshold ? 'after:bg-white' : ''
-              )}
-              to={ROUTE_HOME}
-            >
-              Home
-            </Link>
-            <Link
-              className={cn(
-                'underline-animate',
-                scrollY < innerHeightThreshold ? 'after:bg-white' : ''
-              )}
-              to={ROUTE_ABOUT}
-            >
-              About Us
-            </Link>
-            <button
-              onClick={toggleCouncil}
-              className={cn(
-                'relative uppercase underline-animate',
-                scrollY < innerHeightThreshold ? 'after:bg-white' : ''
-              )}
-            >
-              Council
-              {!isMobile && showCouncil && (
-                <div className='absolute p-3 w-52 flex flex-col gap-2 shadow-md bg-white text-black top-10 right-[-75%] text-sm'>
-                  {/* <Link to={ROUTE_EXE_COUNCIL}>Executive Council</Link> */}
-                  {/* <div className="w-full h-[0.5pt] bg-[#252525]"></div> */}
-                  <Link to={ROUTE_AASC_COUNCIL}>AASC Council</Link>
-                  <div className='w-full h-[0.5pt] bg-[#252525]'></div>
-                  <Link to={ROUTE_AASC_COMMITTEE}>AASC Committee</Link>
-                </div>
-              )}
-            </button>
-            <Link
-              className={cn(
-                'underline-animate',
-                scrollY < innerHeightThreshold ? 'after:bg-white' : ''
-              )}
-              to={ROUTE_EVENTS}
-            >
-              Events
-            </Link>
-            {/* <Link className="underline-animate" to={ROUTE_GALLERY}>Gallery</Link> */}
+          <div className='relative py-3 bg-white/50 backdrop-blur-md rounded-full flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-sm font-light uppercase'>
+            <NavLink route={ROUTE_HOME} label={'Home'} />
+            <NavLink route={ROUTE_ABOUT} label={'About'} />
+            <NavLink route={ROUTE_AASC_COMMITTEE} label={'Committee'} />
+            <NavLink route={ROUTE_AASC_COUNCIL} label={'Council'} />
+            <NavLink route={ROUTE_EVENTS} label={'Events'} />
           </div>
         )}
 
@@ -150,9 +97,7 @@ export default function NavBar({ isMobile }) {
               <FontAwesomeIcon
                 icon={faBars}
                 size='xl'
-                color={
-                  scrollY.get() < innerHeightThreshold ? '#FFFFFF90' : '#000'
-                }
+                color={isHome ? '#FFFFFF' : '#000'}
               />
             ) : (
               <FontAwesomeIcon

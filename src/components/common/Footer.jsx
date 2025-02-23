@@ -14,40 +14,58 @@ import {
   ROUTE_GALLERY,
   ROUTE_AASC_COUNCIL,
 } from '../../constants/routes'
+import { cn, hoverLinkClasses } from '../../utils/utils'
+import { motion } from 'framer-motion'
+import useIsHomePage from '../../hooks/isPageHome'
 
 export default function Footer() {
+  const { isHome } = useIsHomePage()
+
+  const FooterLink = ({ route, label }) => (
+    <Link
+      className={cn(
+        'w-max',
+        hoverLinkClasses,
+        isHome ? 'before:bg-black' : 'before:bg-white'
+      )}
+      to={route}
+    >
+      {label}
+    </Link>
+  )
+
   return (
-    <div className='bg-[#272727] z-50 text-white text-md md:text-xl'>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: false }}
+      className={cn(
+        'm-6 rounded-md border border-white/20 z-50 backdrop-blur-md text-sm',
+        isHome ? 'bg-white/50 text-black' : 'bg-black/80 text-white'
+      )}
+    >
       {/* Upper container */}
-      <div className='flex md:flex-row justify-between xl:justify-around p-9 md:py-10 xl:pb-0'>
+      <div className='flex md:flex-row justify-between items-center xl:justify-around gap-4 p-9 md:py-10 xl:pb-0'>
         {/* Left Upper */}
-        <div className='w-[33%] flex flex-col'>
-          <h3 className='font-bold uppercase text-xl'>Contact Us</h3>
-          <Link to={ROUTE_ABOUT} className='hover:underline cursor-pointer'>
-            About Us
-          </Link>
-          <Link
-            to={ROUTE_EXE_COUNCIL}
-            className='hover:underline cursor-pointer'
+        <div className='w-1/2 flex flex-col'>
+          <h3
+            className={cn(
+              'font-bold uppercase text-xl',
+              isHome ? 'text-gray-900' : 'text-white'
+            )}
           >
-            Executive Council
-          </Link>
-          <Link
-            to={ROUTE_AASC_COUNCIL}
-            className='hover:underline cursor-pointer'
-          >
-            Student Council
-          </Link>
-          <Link to={ROUTE_EVENTS} className='hover:underline cursor-pointer'>
-            Events
-          </Link>
-          <Link to={ROUTE_GALLERY} className='hover:underline cursor-pointer'>
-            Gallery
-          </Link>
+            Contact Us
+          </h3>
+          <FooterLink route={ROUTE_ABOUT} label='About Us' />
+          <FooterLink route={ROUTE_EXE_COUNCIL} label='Executive Council' />
+          <FooterLink route={ROUTE_AASC_COUNCIL} label='Student Council' />
+          <FooterLink route={ROUTE_EVENTS} label='Events' />
+          <FooterLink route={ROUTE_GALLERY} label='Gallery' />
         </div>
 
         {/* Right Upper */}
-        <div className='w-[60%] md:w-[33%] xl:w-[20%]'>
+        <div className='md:w-max w-1/2'>
           <div>Maharaja Surajmal Institute Janakpuri East, ST 12345</div>
           <div>
             <FontAwesomeIcon icon={faEnvelope} /> msijanakpuri.com
@@ -59,17 +77,26 @@ export default function Footer() {
       </div>
 
       {/* Bottom Container */}
-      <div className='p-10 md:pt-0'>
+      <div
+        className={cn('p-10 md:pt-0', isHome ? 'text-gray-900' : 'text-white')}
+      >
         <div className='flex gap-4 justify-center align-center my-2'>
           <a
             href={`https://www.linkedin.com/company/alumni-association-student-council/`}
+            target='_blank'
           >
             <FontAwesomeIcon icon={faLinkedin} size='2x' />
           </a>
-          <a href={`https://www.instagram.com/msi_alumni_association`}>
+          <a
+            target='_blank'
+            href={`https://www.instagram.com/msi_alumni_association`}
+          >
             <FontAwesomeIcon icon={faInstagram} size='2x' />
           </a>
-          <a href={`https://www.facebook.com/share/ATRSQF574ESPdcJa/`}>
+          <a
+            target='_blank'
+            href={`https://www.facebook.com/share/ATRSQF574ESPdcJa/`}
+          >
             <FontAwesomeIcon icon={faFacebook} size='2x' />
           </a>
         </div>
@@ -77,6 +104,6 @@ export default function Footer() {
           © Created by Tech-Team of Alumni Association Student Council
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

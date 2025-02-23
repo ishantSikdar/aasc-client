@@ -18,7 +18,6 @@ export default function EventBriefCard({ idx, event }) {
       transition={{ duration: 1.3, delay: 0.2 * (idx + 1) }}
       viewport={{ once: false }}
       onClick={goToEventDetails}
-      className='w-full h-full'
     >
       <div className='relative w-full md:w-[450px] h-[300px] '>
         <img

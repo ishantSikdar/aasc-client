@@ -45,9 +45,9 @@ function App() {
         ))}
         <Route path={ROUTE_ANY} element={<NotFoundPage />} />
       </Routes>
+      <BackToTop />
 
       <footer className='relative'>
-        <BackToTop />
         <Footer />
       </footer>
     </BrowserRouter>
