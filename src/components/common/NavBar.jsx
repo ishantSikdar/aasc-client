@@ -92,20 +92,21 @@ export default function NavBar({ isMobile }) {
 
         {/* Hamburger button to enable Mobile menu, only displays on mobile size res */}
         {isMobile && (
-          <button onClick={toggleMobileMenu} className={`z-10 text-black`}>
+          <button
+            onClick={toggleMobileMenu}
+            className={`z-10 text-black bg-white/50 backdrop-blur-md size-10 rounded-full flex justify-center items-center`}
+          >
             {!showMenu ? (
               <FontAwesomeIcon
                 icon={faBars}
-                size='xl'
-                color={isHome ? '#FFFFFF' : '#000'}
+                className='size-5'
+                color='#000'
               />
             ) : (
               <FontAwesomeIcon
                 icon={faXmark}
-                size='xl'
-                color={
-                  scrollY.get() < innerHeightThreshold ? '#FFFFFF90' : '#000'
-                }
+                className='size-5'
+                color='#000'
               />
             )}
           </button>
