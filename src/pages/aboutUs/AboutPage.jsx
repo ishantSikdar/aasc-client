@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+
 function AboutPage() {
+  // Change bg color of page to bg-gray-100 so that consistency in navbar color
+  useEffect(() => {
+    document.querySelector("html").classList.add("bg-gray-100");
+    // This function is called when the component is unmounted, ie another page is loaded
+    return () => {
+      document.querySelector("html").classList.remove("bg-gray-100");
+    };
+  }, []);
+
   return (
     <div className="p-6 md:p-20 mt-16 bg-gray-100">
       {/* About Section */}
