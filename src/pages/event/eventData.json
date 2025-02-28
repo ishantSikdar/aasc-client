@@ -1,0 +1,35 @@
+{
+    "eventData": {
+      "title": "Sample Event",
+      "titleImage": "https://example.com/image.jpg",
+      "Description": "This is a sample event description. Add more details here...",
+      "Date": "2025-03-15",
+      "venue": "Main Auditorium",
+      "Link": "https://example.com/event-photos"
+    },
+    "socials": {
+      "instagram": "https://instagram.com/sampleevent",
+      "linkedin": "https://linkedin.com/sampleevent"
+    },
+    "otherEvents": [
+      {
+        "_id": "1",
+        "title": "Another Event",
+        "titleImage": "https://example.com/another-event.jpg",
+        "Description": "Brief description of another event.",
+        "Date": "2025-04-01",
+        "venue": "Conference Hall",
+        "Link": "https://example.com/another-event-photos"
+      },
+      {
+        "_id": "2",
+        "title": "Tech Meetup",
+        "titleImage": "https://example.com/tech-meetup.jpg",
+        "Description": "Join us for an exciting tech meetup.",
+        "Date": "2025-04-10",
+        "venue": "Tech Park",
+        "Link": "https://example.com/tech-meetup-photos"
+      }
+    ]
+  }
+  

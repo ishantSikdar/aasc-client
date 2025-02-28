@@ -1,8 +1,9 @@
 function AboutPage() {
   return (
-    <div className='p-4 md:p-16 mt-16'>
-      <div className=' w-full md:max-w-screen-2xl  mx-auto md:px-20 px-4  bg-[#eae9e9]'>
-        <p className='md:text-lg md:p-8 text-center'>
+    <div className="p-6 md:p-20 mt-16 bg-gray-100">
+      {/* About Section */}
+      <div className="max-w-6xl mx-auto bg-white p-8 md:p-12 shadow-lg rounded-lg text-center">
+        <p className="text-lg md:text-xl font-light text-gray-600">
           The Alumni Association has been created with the vision of fostering
           lifelong connections and celebrating the achievements of our esteemed
           alumni. We serve as a bridge between past, present, and future,
@@ -11,13 +12,12 @@ function AboutPage() {
           championing the diverse accomplishments of our alumni.
         </p>
       </div>
-      <div className='mt-8 md:mt-16  md:grid grid-cols-2 gap-20'>
-        <div>
-          <h1 className='text-2xl font-bold text-[#8c2727] col-span-1'>
-            Vision
-          </h1>
-          <hr className=' border-[#8c2727] border-solid border-2'></hr>
-          <p className='md:text-lg mt-1'>
+      {/* Vision & Mission Section */}
+      <div className="max-w-6xl mx-auto mt-12 md:mt-20 grid md:grid-cols-2 gap-12">
+        <div className="bg-white p-6 md:p-10 shadow-lg rounded-lg">
+          <h2 className="text-3xl font-bold text-[#8c2727]">Vision</h2>
+          <div className="w-16 h-1 bg-[#8c2727] my-3"></div>
+          <p className="text-lg text-gray-700 leading-relaxed">
             The vision of an Alumni Association Student Council is to forge a
             lasting bond between current students and alumni, offering
             mentorship, networking, and support. It strives to empower students
@@ -26,12 +26,10 @@ function AboutPage() {
             future of the institution.
           </p>
         </div>
-        <div className='mt-4 md:mt-0'>
-          <h1 className='text-2xl font-bold text-[#8c2727] col-span-1 '>
-            Mission
-          </h1>
-          <hr className=' border-[#8c2727] border-solid border-2'></hr>
-          <p className='md:text-lg mt-1'>
+        <div className="bg-white p-6 md:p-10 shadow-lg rounded-lg">
+          <h2 className="text-3xl font-bold text-[#8c2727]">Mission</h2>
+          <div className="w-16 h-1 bg-[#8c2727] my-3"></div>
+          <p className="text-lg text-gray-700 leading-relaxed">
             The mission of the Alumni Association Student Council is to
             represent and advocate for current students, facilitate meaningful
             connections with alumni, organize events that promote engagement and
@@ -40,18 +38,16 @@ function AboutPage() {
           </p>
         </div>
       </div>
-      <div>
-        <h1 className='text-2xl font-bold text-[#8c2727] mt-8 md:mt-16'>
-          Objectives
-        </h1>
-        <hr className=' border-[#8c2727] border-solid border-2 w-1/2'></hr>
-        <p className='md:text-lg mt-1'>
+      <div className="max-w-6xl mx-auto mt-12 md:mt-20 bg-white p-8 md:p-12 shadow-lg rounded-lg">
+        <h2 className="text-3xl font-bold text-[#8c2727] text-center">Objectives</h2>
+        <div className="w-24 h-1 bg-[#8c2727] mx-auto my-3"></div>
+        <p className="text-lg text-gray-700 text-center">
           Our objectives include fostering community, networking, mentorship,
           event organization, professional development, and enhancing
           institution reputation through alumni achievements.
         </p>
         <div className='m-6 '>
-          <ul className='list-disc md:text-lg'>
+        <ul className="mt-6 space-y-3 text-lg text-gray-700 list-disc pl-6">
             <li>Serve as a liaison between current students and alumni.</li>
             <li>
               Foster a sense of community and continuity within the student

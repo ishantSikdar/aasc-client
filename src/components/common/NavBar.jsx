@@ -74,14 +74,14 @@ export default function NavBar({ isMobile }) {
             <img
               src='/aascLogoMSI-no-bg.png'
               alt='Alumni Association'
-              className='h-12 md:h-16 p-2 bg-white/50 backdrop-blur-md px-3 overflow-visible md:px-6 rounded-full transition-colors duration-300 ease-in-out'
+              className='h-12 md:h-16 p-2 bg-white/80 backdrop-blur-md px-3 overflow-visible md:px-6 rounded-full transition-colors duration-300 ease-in-out'
             />
           </Link>
         </div>
 
         {/* For Tab/Desktop screen */}
         {!isMobile && (
-          <div className='relative py-3 bg-white/50 backdrop-blur-md rounded-full flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-sm font-light uppercase'>
+          <div className='relative py-3 bg-white/80 backdrop-blur-md rounded-full flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-sm font-light uppercase'>
             <NavLink route={ROUTE_HOME} label={'Home'} />
             <NavLink route={ROUTE_ABOUT} label={'About'} />
             <NavLink route={ROUTE_AASC_COMMITTEE} label={'Committee'} />

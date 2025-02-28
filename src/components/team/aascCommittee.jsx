@@ -1,90 +1,74 @@
-import aaec from '../../constants/teamData/committeeData.json'
+import { useEffect, useState } from 'react'
+import { client, urlFor } from '../../lib/sanity'
 
-export default function AlumniCommittee() {
-  const firstFour = aaec.filter((aaecData) => {
-    return aaecData.designation !== 'Executive Member'
-  })
+export default function AlumniCommittee({ isMobile }) {
+  const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
-  const SecondOne = aaec.filter((item) => item.id === '5' || item.id === '6')
-  const SecondTwo = aaec.filter((item) => item.id === '7' || item.id === '8')
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const query = `
+        *[_type == 'Faculty'] | order(_createdAt desc) {
+          _id,
+          name,
+          aImage,
+          Designation,
+          Description
+        }
+        `
+
+        const fetchedData = await client.fetch(query)
+        console.log("Fetched Faculty Data:", fetchedData) // Debugging log
+        setData(fetchedData)
+      } catch (error) {
+        console.error('Error fetching faculty data:', error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [])
 
   return (
-    <>
-      <div className='mt-24 flex justify-center w-full text-center'>
-        <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold underline text-orange-800 text-center'>
-          ALUMNI COMMITTEE
-        </h1>
+    <div className='my-20 flex flex-col gap-10 md:px-10'>
+      <div className='text-[#853333] text-center flex flex-col items-center gap-2 md:mt-10'>
+        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold uppercase'>
+          Alumni Association Student Council
+        </h2>
+        <div className='h-1 w-[70%] lg:w-[58%] bg-[#853333]'></div>
       </div>
 
-      {firstFour.map((data1) => (
-        <div
-          className='mx-4 mt-5 md:mt-10 h-auto bg-gray-100 flex flex-col md:flex-row '
-          key={data1.id}
-        >
-          <div className='text-center p-4 md:p-7'>
-            <img src={data1.img} className=' md:w-full' alt='Background' />
-            <h1 className='text-xl md:text-2xl font-semibold text-orange-800 mt-2'>
-              {data1.name}
-            </h1>
-          </div>
-          <div className='p-4 md:p-7'>
-            <div className='text-xl md:text-2xl font-bold underline text-orange-800'>
-              {data1.designation}
-            </div>
-
-            <div>
-              <p className='text-sm md:text-base leading-relaxed mt-2'>
-                {data1.description}
-              </p>
-            </div>
-          </div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 xl:gap-8 place-items-center'>
+  {data.length > 0 ? (
+    data.map((item) => (
+      <div
+        key={item._id}
+        className={`p-6 w-[320px] h-auto bg-[#EEEBE8] rounded-2xl shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-[1.05] flex flex-col items-center gap-4`}
+      >
+        <img
+          src={urlFor(item.aImage).url()}
+          alt={item.name}
+          className='w-[200px] h-[250px] object-cover rounded-lg'
+        />
+        <div className='text-center flex flex-col items-center gap-2'>
+          <h3 className='text-[#853333] font-bold text-2xl'>{item.name}</h3>
+          <div className='w-10 h-1 bg-[#853333]'></div>
+          <p className='uppercase text-lg font-semibold text-gray-700'>{item.Designation}</p>
+          <p className='text-sm text-gray-600 px-4'>{item.Description}</p>
         </div>
-      ))}
-
-      {/* --------------------------------- */}
-      <div className='flex flex-col md:flex-row justify-center items-center'>
-        {SecondOne.map((data2) => (
-          <div className='bg-gray-100 m-5 md:w-1/2' key={data2.id}>
-            <div className='text-2xl text-center mt-6 font-bold underline text-orange-800'>
-              {data2.designation}
-            </div>
-            <div className='flex flex-col md:flex-row md:justify-between'>
-              <div className='text-center p-7'>
-                <img src={data2.img} className='w-full' alt='Profile' />
-                <h1 className='text-2xl pt-4 font-semibold text-orange-800'>
-                  {data2.name}
-                </h1>
-              </div>
-              <div className=' m-auto  text-center md:text-start'>
-                <p>{data2.description}</p>
-              </div>
-            </div>
-          </div>
-        ))}
       </div>
+    ))
+  ) : (
+    <p className='text-gray-700'>No faculty members found.</p>
+  )}
+</div>
 
-      {/* -------------------------------------------- */}
-
-      <div className='flex flex-col md:flex-row justify-center items-center'>
-        {SecondTwo.map((data2) => (
-          <div className='bg-gray-100 m-5 md:w-1/2' key={data2.id}>
-            <div className='text-2xl text-center mt-6 font-bold underline text-orange-800'>
-              {data2.designation}
-            </div>
-            <div className='flex flex-col md:flex-row md:justify-between'>
-              <div className='text-center p-7'>
-                <img src={data2.img} className='md:w-full' alt='Profile' />
-                <h1 className='text-2xl pt-4 font-semibold text-orange-800'>
-                  {data2.name}
-                </h1>
-              </div>
-              <div className=' m-auto  text-center md:text-start'>
-                <p>{data2.description}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </>
+      )}
+    </div>
   )
 }

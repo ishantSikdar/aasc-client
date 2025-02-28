@@ -14,7 +14,7 @@ export default function AboutBrief() {
         viewport={{ once: false, amount: 0.5 }}
         className='w-full xl:w-2/3 bg-white/50 backdrop-blur-md p-8 md:p-12 rounded-lg shadow-lg'
       >
-        <h2 className='uppercase font-bold text-3xl md:text-2xl xl:text-3xl text-gray-900 mb-4'>
+        <h2 className='uppercase font-bold text-3xl md:text-2xl xl:text-3xl text-[#fff] mb-4'>
           About the Alumni Association
         </h2>
         <p className='text-black text-sm md:text-md xl:text-lg leading-relaxed'>
@@ -26,7 +26,7 @@ export default function AboutBrief() {
         <div className='mt-6'>
           <Link
             to={ROUTE_ABOUT}
-            className='inline-block bg-[#4b39b5] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#372b8b] transition duration-300'
+            className='inline-block bg-[#3a3a3a] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#372b8b] transition duration-300'
           >
             Read More
           </Link>
