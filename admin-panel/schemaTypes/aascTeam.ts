@@ -1,11 +1,11 @@
 export default {
-  title: 'AASC Team',
   name: 'aascTeam',
   type: 'document',
+  title: 'AASC Team',
   fields: [
     {
       title: 'id',
-      name: '_id',
+      name: 'id',
       type: 'number',
     },
     {
