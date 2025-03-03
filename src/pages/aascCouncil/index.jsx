@@ -53,6 +53,7 @@ export default function AascCouncilPage({ isMobile }) {
               instagram={item.insta}
               linkedin={item.linkedin}
               position={item.Pos}
+              size='large'
             />
           ))}
         </div>
