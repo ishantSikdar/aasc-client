@@ -58,7 +58,7 @@ function AboutPage() {
           institution reputation through alumni achievements.
         </p>
         <div className='m-6 '>
-        <ul className="mt-6 space-y-1 text-lg text-gray-700 list-disc pl-6">
+        <ul className="mt-6 text-lg text-gray-700 list-disc pl-6">
             <li>Serve as a liaison between current students and alumni.</li>
             <li>
               Foster a sense of community and continuity within the student
