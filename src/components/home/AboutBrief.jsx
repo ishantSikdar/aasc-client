@@ -23,10 +23,11 @@ export default function AboutBrief() {
           and future, we provide a platform for networking, mentorship, and
           professional growth while honoring our alma mater’s legacy.
         </p>
+        {/* On hover, change cbg color */}
         <div className='mt-6'>
           <Link
             to={ROUTE_ABOUT}
-            className='inline-block bg-[#3a3a3a] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#372b8b] transition duration-300'
+            className='inline-block bg-[#3a3a3a] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#8c2727] transition duration-300'
           >
             Read More
           </Link>
