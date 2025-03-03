@@ -15,7 +15,7 @@ function AboutPage() {
       {/* About Section */}
       <div className="max-w-6xl mx-auto bg-white p-8 md:p-12 shadow-lg rounded-lg text-center">
         <p className="text-lg md:text-xl font-light text-gray-600">
-          The Alumni Association has been created with the vision of fostering
+          The Alumni Relations Cell has been created with the vision of fostering
           lifelong connections and celebrating the achievements of our esteemed
           alumni. We serve as a bridge between past, present, and future,
           providing a platform for networking, mentorship, and professional
@@ -29,7 +29,7 @@ function AboutPage() {
           <h2 className="text-3xl font-bold text-[#8c2727]">Vision</h2>
           <div className="w-16 h-1 bg-[#8c2727] my-3"></div>
           <p className="text-lg text-gray-700 leading-relaxed">
-            The vision of an Alumni Association Student Council is to forge a
+            Our vision is to forge a
             lasting bond between current students and alumni, offering
             mentorship, networking, and support. It strives to empower students
             through career guidance, events, and a culture of giving back,
@@ -41,7 +41,7 @@ function AboutPage() {
           <h2 className="text-3xl font-bold text-[#8c2727]">Mission</h2>
           <div className="w-16 h-1 bg-[#8c2727] my-3"></div>
           <p className="text-lg text-gray-700 leading-relaxed">
-            The mission of the Alumni Association Student Council is to
+            Our mission is to
             represent and advocate for current students, facilitate meaningful
             connections with alumni, organize events that promote engagement and
             tradition, and provide resources and support to enhance the student

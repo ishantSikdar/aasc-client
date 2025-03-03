@@ -11,7 +11,6 @@ import {
   ROUTE_ABOUT,
   ROUTE_EXE_COUNCIL,
   ROUTE_EVENTS,
-  ROUTE_GALLERY,
   ROUTE_AASC_COUNCIL,
 } from '../../constants/routes'
 import { cn, hoverLinkClasses } from '../../utils/utils'
@@ -58,21 +57,23 @@ export default function Footer() {
             Contact Us
           </h3>
           <FooterLink route={ROUTE_ABOUT} label='About Us' />
-          <FooterLink route={ROUTE_EXE_COUNCIL} label='Executive Council' />
-          <FooterLink route={ROUTE_AASC_COUNCIL} label='Student Council' />
+          <FooterLink route={ROUTE_EXE_COUNCIL} label='Executive Committee' />
+          <FooterLink route={ROUTE_AASC_COUNCIL} label='Student Team' />
           <FooterLink route={ROUTE_EVENTS} label='Events' />
-          <FooterLink route={ROUTE_GALLERY} label='Gallery' />
+          {/* <FooterLink route={ROUTE_GALLERY} label='Gallery' /> */}
         </div>
 
         {/* Right Upper */}
         <div className='md:w-max w-1/2'>
           <div>Maharaja Surajmal Institute Janakpuri East, ST 12345</div>
           <div>
-            <FontAwesomeIcon icon={faEnvelope} /> msijanakpuri.com
+            <FontAwesomeIcon icon={faEnvelope} /> <a href='mailto:alumni@msijanakpuri.com'>
+            alumni@msijanakpuri.com
+            </a>
           </div>
-          <div>
+          {/* <div>
             <FontAwesomeIcon icon={faPhone} /> 123-456-7890
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -82,14 +83,14 @@ export default function Footer() {
       >
         <div className='flex gap-4 justify-center align-center my-2'>
           <a
-            href={`https://www.linkedin.com/company/alumni-association-student-council/`}
+            href={`https://www.linkedin.com/company/msi-alumni-relations-cell`}
             target='_blank'
           >
             <FontAwesomeIcon icon={faLinkedin} size='2x' />
           </a>
           <a
             target='_blank'
-            href={`https://www.instagram.com/msi_alumni_association`}
+            href={`https://www.instagram.com/msi_alumni_relations_cell`}
           >
             <FontAwesomeIcon icon={faInstagram} size='2x' />
           </a>
@@ -101,7 +102,7 @@ export default function Footer() {
           </a>
         </div>
         <div className='text-center'>
-          © Created by Tech-Team of Alumni Association Student Council
+          © Created by Tech-Team of Alumni Relations Cell
         </div>
       </div>
     </motion.div>

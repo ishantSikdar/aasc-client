@@ -15,10 +15,10 @@ export default function AboutBrief() {
         className='w-full xl:w-2/3 bg-white/50 backdrop-blur-md p-8 md:p-12 rounded-lg shadow-lg'
       >
         <h2 className='uppercase font-bold text-3xl md:text-2xl xl:text-3xl text-[#fff] mb-4'>
-          About the Alumni Association
+          About the Alumni Relations Cell
         </h2>
         <p className='text-black text-sm md:text-md xl:text-lg leading-relaxed'>
-          The Alumni Association fosters lifelong connections and celebrates the
+          The Alumni Relations Cell fosters lifelong connections and celebrates the
           achievements of our alumni. Serving as a bridge between past, present,
           and future, we provide a platform for networking, mentorship, and
           professional growth while honoring our alma mater’s legacy.

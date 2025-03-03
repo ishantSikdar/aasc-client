@@ -52,7 +52,7 @@ export default function HeroSection() {
           transition={{ duration: 1.2, delay: 0.2 }}
           viewport={{ once: false }}
         >
-          Alumni Association
+          Alumni Relations Cell
         </motion.h1>
 
         {/* Description */}
@@ -63,7 +63,7 @@ export default function HeroSection() {
           transition={{ duration: 1.3, delay: 0.4 }}
           viewport={{ once: false }}
         >
-          The Alumni Association of Maharaja Surajmal Institute aims at
+          The Alumni Relations Cell of Maharaja Surajmal Institute aims at
           engaging, reminiscing and reconnecting with the fellow alumni of this
           prestigious institution. We are a one-stop hub to discover events,
           resources and opportunities related to the alma mater. Whether you

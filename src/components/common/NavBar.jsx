@@ -66,14 +66,15 @@ export default function NavBar({ isMobile }) {
           {/* <a href="https://www.msijanakpuri.com/" target="_blank">
           <img
             src="/msiLogo.png"
-            alt="Alumni Association"
+            alt="Alumni Relations Cell"
             className="h-12 md:h-16"
           />
         </a> */}
           <Link to={ROUTE_HOME} onClick={closeMobileMenu}>
             <img
-              src='/aascLogoMSI-no-bg.png'
-              alt='Alumni Association'
+              src='/arc-logo-black-cropped-no-bg-gimp.png'
+              // src='old-aascLogoMSI-no-bg.png'
+              alt='Alumni Relations Cell'
               className='h-12 md:h-16 p-2 bg-white/80 backdrop-blur-md px-3 overflow-visible md:px-6 rounded-full transition-colors duration-300 ease-in-out'
             />
           </Link>
@@ -85,7 +86,7 @@ export default function NavBar({ isMobile }) {
             <NavLink route={ROUTE_HOME} label={'Home'} />
             <NavLink route={ROUTE_ABOUT} label={'About'} />
             <NavLink route={ROUTE_AASC_COMMITTEE} label={'Committee'} />
-            <NavLink route={ROUTE_AASC_COUNCIL} label={'Council'} />
+            <NavLink route={ROUTE_AASC_COUNCIL} label={'Student Team'} />
             <NavLink route={ROUTE_EVENTS} label={'Events'} />
           </div>
         )}
@@ -137,11 +138,11 @@ export default function NavBar({ isMobile }) {
               About Us
             </Link>
             <Link
-              to={ROUTE_EXE_COUNCIL}
+              to={ROUTE_AASC_COMMITTEE}
               onClick={closeMobileMenu}
               className='border-b-[1pt] border-[#252525] p-2'
             >
-              Executive Council
+              Committee
             </Link>
             <Link
               to={ROUTE_AASC_COMMITTEE}
@@ -155,7 +156,7 @@ export default function NavBar({ isMobile }) {
               onClick={closeMobileMenu}
               className='border-b-[1pt] border-[#252525] p-2'
             >
-              AASC Council
+              Student Team
             </Link>
             <Link
               to={ROUTE_EVENTS}
