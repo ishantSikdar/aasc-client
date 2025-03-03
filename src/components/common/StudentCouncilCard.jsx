@@ -6,20 +6,31 @@ export default function StudentCouncilCard({
   instagram,
 }) {
   return (
-    <div className='p-4 w-[300px] h-[400px] bg-[#EEEBE8] rounded-xl flex flex-col justify-between items-center'>
-      <img src={photo} alt='' className='w-[200px] h-[250px] object-cover' />
-      <div className='flex flex-col gap-[1px]'>
-        <h3 className='text-[#853333] font-bold text-3xl'>{name}</h3>
-        <div className='w-full h-1 bg-[#853333]'></div>
+    <div className='relative p-4 w-[240px] h-[350px] bg-[#EEEBE8] rounded-md flex flex-col overflow-hidden justify-between items-center'>
+      <img
+        src={photo}
+        className='absolute inset-0 w-full h-full object-cover'
+      />
+
+      <div className='text-white absolute text-center bottom-5 flex flex-col gap-[2px] z-10 bg-black/50 py-2 w-full'>
+        <h3 className='font-bold text-2xl'>{name}</h3>
+        <div className='font-bold'>{position}</div>
       </div>
-      <div className='uppercase text-xl font-extrabold'>{position}</div>
-      <div className='flex gap-4 text-4xl'>
-        <a href={linkedin}>
-          <img src='/linkedin.png' alt='' className='w-7' />
-        </a>
-        <a href={instagram}>
-          <img src='/instagram.png' alt='' className='w-7' />
-        </a>
+
+      {/* <div className='h-40 w-32 rounded-[100%] bg-black/50 absolute -top-10 -right-16 z-10' /> */}
+
+      <div className='flex flex-col gap-2 z-20 text-4xl absolute top-3 right-3'>
+        {linkedin && (
+          <a href={linkedin}>
+            <img src='/linkedin.png' alt='' className='w-8' />
+          </a>
+        )}
+
+        {instagram && (
+          <a href={instagram}>
+            <img src='/instagram.png' alt='' className='w-8' />
+          </a>
+        )}
       </div>
     </div>
   )
