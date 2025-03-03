@@ -21,7 +21,7 @@ export default function AascCouncilPage({ isMobile }) {
           `
 
         const fetchedData = await client.fetch(query)
-        setData(fetchedData)
+        setData(fetchedData.sort(() => Math.random() - 0.5))
         setIsLoading(false)
       } catch (error) {
         console.error('Error fetching events:', error)
@@ -44,20 +44,17 @@ export default function AascCouncilPage({ isMobile }) {
         <Loader />
       ) : (
         <div className='flex flex-col md:flex-row flex-wrap gap-10 md:gap-16 xl:gap-5 justify-center items-center'>
-          {data &&
-            data
-              .sort(() => Math.random() - 0.5)
-              .map((item) => (
-                <StudentCouncilCard
-                  key={item._id}
-                  isMobile={isMobile}
-                  photo={urlFor(item.aImage).url()}
-                  name={item.name}
-                  instagram={item.insta}
-                  linkedin={item.linkedin}
-                  position={item.Pos}
-                />
-              ))}
+          {data?.map((item) => (
+            <StudentCouncilCard
+              key={item._id}
+              isMobile={isMobile}
+              photo={urlFor(item.aImage).url()}
+              name={item.name}
+              instagram={item.insta}
+              linkedin={item.linkedin}
+              position={item.Pos}
+            />
+          ))}
         </div>
       )}
     </div>
