@@ -15,7 +15,7 @@ export default function EventBriefCard({ idx, event }) {
     <motion.button
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.3, delay: 0.2 * (idx + 1) }}
+      transition={{ duration: 1.3 }}
       viewport={{ once: false }}
       onClick={goToEventDetails}
     >
