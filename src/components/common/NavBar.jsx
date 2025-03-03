@@ -82,7 +82,7 @@ export default function NavBar({ isMobile }) {
 
         {/* For Tab/Desktop screen */}
         {!isMobile && (
-          <div className='relative py-3 bg-white/80 backdrop-blur-md rounded-full flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-sm font-light uppercase'>
+          <div className='relative py-5 bg-white/80 backdrop-blur-md rounded-full flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-sm font-light uppercase'>
             <NavLink route={ROUTE_HOME} label={'Home'} />
             <NavLink route={ROUTE_ABOUT} label={'About'} />
             <NavLink route={ROUTE_AASC_COMMITTEE} label={'Committee'} />
@@ -98,17 +98,9 @@ export default function NavBar({ isMobile }) {
             className={`z-10 text-black bg-white/50 backdrop-blur-md size-10 rounded-full flex justify-center items-center`}
           >
             {!showMenu ? (
-              <FontAwesomeIcon
-                icon={faBars}
-                className='size-5'
-                color='#000'
-              />
+              <FontAwesomeIcon icon={faBars} className='size-5' color='#000' />
             ) : (
-              <FontAwesomeIcon
-                icon={faXmark}
-                className='size-5'
-                color='#000'
-              />
+              <FontAwesomeIcon icon={faXmark} className='size-5' color='#000' />
             )}
           </button>
         )}
