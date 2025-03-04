@@ -24,6 +24,7 @@ export default function EventDetails() {
                         }
                     },
                     titleImage,
+                    Image2,
                     Link,
                     venue,
                 }`
@@ -33,7 +34,8 @@ export default function EventDetails() {
                     title,
                     Date,
                     titleImage,
-                }`
+                    Image2                
+}`
 
         const fetchedEventData = await client.fetch(singleEventQuery)
         setEventData(fetchedEventData[0])
@@ -68,11 +70,16 @@ export default function EventDetails() {
   {/* Event Details */}
   <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-10 items-center">
     {/* Cover Image */}
-    <div className="flex justify-center xl:justify-start">
+    <div className="flex flex-col w-3/4 justify-center xl:justify-start">
       <img
         src={urlFor(eventData?.titleImage).url()}
         alt="Event Cover"
-        className="rounded-3xl w-full xl:w-auto object-cover"
+        className="rounded-3xl  w-32 xl:w-auto object-cover"
+      />
+      <img
+        src={urlFor(eventData?.Image2).url()}
+        alt="Cover"
+        className="rounded-3xl  w-32 xl:w-auto object-cover"
       />
     </div>
 

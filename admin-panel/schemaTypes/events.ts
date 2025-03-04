@@ -22,6 +22,11 @@ export default {
       title: 'Title Image',
     },
     {
+      name: 'Image2',
+      type: 'image',
+      title: 'Body Image',
+    },
+    {
       name: 'Description',
       type: 'text',
       title: 'Description',
