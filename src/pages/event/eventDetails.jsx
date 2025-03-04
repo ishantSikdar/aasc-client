@@ -93,17 +93,12 @@ export default function EventDetails() {
                   ABOUT THE EVENT
                 </div>
                 <div className='text-lg md:text-xl overflow-hidden'>
-                  {truncateDescription(eventData.Description, 900)}
+                  {eventData.Description}
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Left Over Description */}
-          <div className='text-lg md:text-xl'>
-            {eventData.Description.length > 900 &&
-              eventData.Description.substring(900)}
-          </div>
 
           {/* socials */}
           <div className='flex gap-4 text-5xl md:text-5xl text-[#853333]'>
