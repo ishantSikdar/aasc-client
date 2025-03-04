@@ -13,7 +13,7 @@ export default function FacultyCard({
           <div className='w-2/3 h-1 bg-[#853333]'></div>
           <p className='uppercase text-lg font-extrabold mt-2'>{Designation}</p>
         </div>
-        <p className='text-sm text-gray-700 text-center px-2'>{Description}</p>
+        {/* <p className='text-sm text-gray-700 text-center px-2'>{Description}</p> */}
       </div>
     );
   }
