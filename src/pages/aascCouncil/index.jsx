@@ -56,6 +56,12 @@ export default function AascCouncilPage({ isMobile }) {
           Alumni Relations Student Team
         </h2>
       </div>
+
+      <div className="flex flex-col md:flex-row flex-wrap gap-10 md:gap-16 xl:gap-5 justify-center items-center">
+      <Member />
+      </div>
+
+      
       
       <h2 className='text-[#853333] text-center text-xl md:text-4xl underline lg:text-5xl font-bold uppercase mt-6'>
         FOUNDING TEAM
