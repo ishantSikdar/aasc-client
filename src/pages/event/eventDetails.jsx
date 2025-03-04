@@ -58,61 +58,48 @@ export default function EventDetails() {
         <Loader />
       ) : (
         <div className='mt-20 md:mt-32 flex flex-col gap-4'>
-          {/* Title */}
-          <div className='flex flex-col gap-1 items-center md:gap-3'>
-            <h1 className='text-3xl text-center font-bold text-[#853333] md:text-5xl '>
-              {eventData.title}
-            </h1>
-            <div className='w-[70%] h-1 md:h-[5px] bg-[#853333]'></div>
-          </div>
+          <div className="flex flex-col items-center gap-6 md:gap-10 py-6">
+  {/* Title Section */}
+  <div className="text-center">
+    <h1 className="text-3xl md:text-5xl font-bold text-[#853333]">{eventData.title}</h1>
+    <div className="mt-2 md:mt-3 w-24 md:w-32 h-[4px] bg-[#853333] mx-auto rounded-full"></div>
+  </div>
 
-          {/* Event Details */}
-          <div className='flex flex-col xl:flex-row gap-5 md:gap-7 py-2 h-max'>
-            {/* Cover Image */}
-            <img
-              src={urlFor(eventData?.titleImage).url()}
-              alt=''
-              className='rounded-3xl max-h-96 object-cover'
-            />
+  {/* Event Details */}
+  <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-10 items-center">
+    {/* Cover Image */}
+    <div className="flex justify-center xl:justify-start">
+      <img
+        src={urlFor(eventData?.titleImage).url()}
+        alt="Event Cover"
+        className="rounded-3xl w-full xl:w-auto object-cover"
+      />
+    </div>
 
-            <div className='flex flex-col gap-5'>
-              {/* Description */}
-              <div className='flex flex-col gap-2 md:gap-4'>
-                <div className='font-bold text-2xl md:text-3xl'>
-                  ABOUT THE EVENT
-                </div>
-                <div className='text-lg md:text-xl overflow-hidden'>
-                  {eventData.Description}
-                </div>
-              </div>
-            </div>
-          </div>
+    {/* Event Description */}
+    <div className="flex flex-col gap-5">
+      <h2 className="font-bold text-2xl md:text-3xl text-[#853333]">ABOUT THE EVENT</h2>
+      <p className="text-lg md:text-xl">{eventData.Description}</p>
+    </div>
+  </div>
 
+  {/* Social Media Icons */}
+  <div className="flex gap-6 text-4xl md:text-5xl text-[#853333]">
+    {/* <FontAwesomeIcon icon={faInstagram} /> */}
+    {/* <FontAwesomeIcon icon={faLinkedin} /> */}
+  </div>
 
-          {/* socials */}
-          <div className='flex gap-4 text-5xl md:text-5xl text-[#853333]'>
-            {/* <FontAwesomeIcon icon={faInstagram} /> */}
-            {/* <FontAwesomeIcon icon={faLinkedin} /> */}
-          </div>
+  {/* Event Details (Date & Venue) */}
+  <div className="text-lg md:text-xl text-center">
+    <p className="font-bold">
+      Date: <span className="font-medium">{eventData.Date}</span>
+    </p>
+    <p className="font-bold">
+      Venue: <span className="font-medium">{eventData.venue}</span>
+    </p>
+  </div>
+</div>
 
-          {/* Other details */}
-          <div className='text-xl md:text-xl'>
-            <div className='font-bold'>
-              Date: <span className='font-medium'>{eventData.Date}</span>
-            </div>
-            <div className='font-bold'>
-              Venue: <span className='font-medium'>{eventData.venue}</span>
-            </div>
-            <div className='font-bold'>
-              View Pictures:{' '}
-              <a
-                href={eventData.Link}
-                className='hover:underline text-blue-600 font-medium'
-              >
-                Click to view photos
-              </a>
-            </div>
-          </div>
 
           <div className='flex flex-col gap-1 items-center'>
             <h1 className='text-3xl text-center font-bold text-[#853333] md:text-5xl'>
@@ -130,6 +117,15 @@ export default function EventDetails() {
               ))
             )}
           </div>
+          <div className='font-bold'>
+              View Pictures:{' '}
+              <a
+                href={eventData.Link}
+                className='hover:underline text-blue-600 font-medium'
+              >
+                Click to view photos
+              </a>
+            </div>
         </div>
       )}
     </div>
