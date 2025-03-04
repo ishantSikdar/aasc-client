@@ -9,7 +9,7 @@ export default function AlumniCommittee({ isMobile }) {
     async function fetchData() {
       try {
         const query = `
-        *[_type == 'Faculty'] | order(_createdAt desc) {
+        *[_type == 'Faculty'] | order(id desc) {
           _id,
           name,
           aImage,
@@ -34,10 +34,10 @@ export default function AlumniCommittee({ isMobile }) {
   return (
     <div className='my-20 flex flex-col gap-10 md:px-10'>
       <div className='text-[#853333] text-center flex flex-col items-center gap-2 md:mt-10'>
-        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold uppercase'>
+        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold uppercase underline'>
           Alumni Relations Committee
         </h2>
-        <div className='h-1 w-[70%] lg:w-[52%] bg-[#853333]'></div>
+        {/* <div className='h-1 w-[70%] lg:w-[52%] bg-[#853333]'></div> */}
       </div>
 
       {isLoading ? (
@@ -63,9 +63,9 @@ export default function AlumniCommittee({ isMobile }) {
                   <p className='uppercase text-lg font-semibold text-gray-700'>
                     {item.Designation}
                   </p>
-                  <p className='text-sm text-gray-600 px-4'>
+                  {/* <p className='text-sm text-gray-600 px-4'>
                     {item.Description}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             ))

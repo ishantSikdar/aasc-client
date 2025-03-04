@@ -22,7 +22,7 @@ export default function AlumniBrief() {
   }
 
   return (
-    <div className='relative md:py-10 md:overflow-x-hidden'>
+    <div className='relative md:py-10 overflow-x-hidden'>
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

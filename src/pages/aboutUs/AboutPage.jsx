@@ -14,7 +14,7 @@ function AboutPage() {
     <div className="p-6 md:p-20 mt-16 bg-gray-100">
       {/* About Section */}
       <div className="max-w-6xl mx-auto bg-white p-8 md:p-12 shadow-lg rounded-lg text-center">
-        <p className="text-lg md:text-xl font-light text-gray-600">
+        <p className="text-lg text-gray-700 leading-relaxed">
           The Alumni Relations Cell has been created with the vision of fostering
           lifelong connections and celebrating the achievements of our esteemed
           alumni. We serve as a bridge between past, present, and future,
@@ -28,7 +28,7 @@ function AboutPage() {
         <div className="bg-white p-6 md:p-10 shadow-lg rounded-lg">
           <h2 className="text-3xl font-bold text-[#8c2727]">Vision</h2>
           <div className="w-16 h-1 bg-[#8c2727] my-3"></div>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed text-justify">
             Our vision is to forge a
             lasting bond between current students and alumni, offering
             mentorship, networking, and support. It strives to empower students
@@ -40,7 +40,7 @@ function AboutPage() {
         <div className="bg-white p-6 md:p-10 shadow-lg rounded-lg">
           <h2 className="text-3xl font-bold text-[#8c2727]">Mission</h2>
           <div className="w-16 h-1 bg-[#8c2727] my-3"></div>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed text-justify">
             Our mission is to
             represent and advocate for current students, facilitate meaningful
             connections with alumni, organize events that promote engagement and
@@ -52,7 +52,7 @@ function AboutPage() {
       <div className="max-w-6xl mx-auto mt-12 md:mt-20 bg-white p-8 md:p-12 shadow-lg rounded-lg">
         <h2 className="text-3xl font-bold text-[#8c2727] text-center">Objectives</h2>
         <div className="w-24 h-1 bg-[#8c2727] mx-auto my-3"></div>
-        <p className="text-lg text-gray-700">
+        <p className="text-lg text-gray-700 text-justify">
           Our objectives include fostering community, networking, mentorship,
           event organization, professional development, and enhancing
           institution reputation through alumni achievements.

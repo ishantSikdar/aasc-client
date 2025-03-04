@@ -19,10 +19,10 @@ export default function EventBriefCard({ idx, event }) {
       viewport={{ once: false }}
       onClick={goToEventDetails}
     >
-      <div className='relative w-full md:w-[450px] h-[300px] '>
+      <div className='relative w-full md:w-[450px] h-[300px]'>
         <img
           alt=''
-          className='absolute w-full h-full object-cover'
+          className='absolute w-[450px] h-[300px] object-cover object-center'
           src={urlFor(event.titleImage).url()}
         />
 

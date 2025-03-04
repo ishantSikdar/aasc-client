@@ -19,7 +19,7 @@ export default function EventsBrief({ isMobile }) {
 
   const fetchLatestEvents = async () => {
     try {
-      const query = `*[_type == 'Events'] | order(Date desc) [0...3] {
+      const query = `*[_type == 'Events'] | order(Date desc) {
                 _id,
                 title,
                 Date,
@@ -60,21 +60,34 @@ export default function EventsBrief({ isMobile }) {
         Events
       </motion.h2>
 
-      <div className='m-10 pb-4 md:block hidden relative'>
+      <div className='relative overflow-x-hidden md:block hidden md:mx-5'>
         {isLoading ? (
           <Loader />
         ) : (
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={80}
+            spaceBetween={50}
             slidesPerView={'auto'}
-            initialSlide={1}
+            breakpoints={{
+              400: {
+                slidesPerView: 1,
+              },
+              870: {
+                slidesPerView: 2,
+              },
+              1400: {
+                slidesPerView: 3,
+              },
+            }}
             loop
-            className='h-max w-[400px] !overflow-visible'
+            className='w-full h-[400px] !overflow-visible mx-auto'
           >
             {latestEvents.map((event, i) => (
-              <SwiperSlide key={event._id}>
+              <SwiperSlide
+                key={event._id}
+                className='flex justify-center items-center'
+              >
                 <EventBrief idx={i} event={event} />
               </SwiperSlide>
             ))}
@@ -82,14 +95,14 @@ export default function EventsBrief({ isMobile }) {
         )}
 
         <button
-          className='absolute top-1/2 -translate-y-1/2 z-50 left-0 bg-white/50 backdrop-blur-sm p-4 rounded-full'
+          className='absolute top-1/2 -translate-y-1/2 z-[9999] left-10 bg-white/50 backdrop-blur-sm p-4 rounded-full'
           onClick={handlePrev}
         >
           <FontAwesomeIcon icon={faArrowLeft} className='text-black' />
         </button>
 
         <button
-          className='absolute top-1/2 -translate-y-1/2 z-50 right-0 bg-white/50 backdrop-blur-sm p-4 rounded-full'
+          className='absolute top-1/2 -translate-y-1/2 z-[9999] right-10 bg-white/50 backdrop-blur-sm p-4 rounded-full'
           onClick={handleNext}
         >
           <FontAwesomeIcon icon={faArrowRight} className='text-black' />
@@ -97,7 +110,7 @@ export default function EventsBrief({ isMobile }) {
       </div>
 
       <div className='flex flex-col p-4 overflow-hidden gap-4 md:hidden'>
-        {latestEvents.map((event, i) => (
+        {latestEvents.slice(0, 3).map((event, i) => (
           <EventBrief idx={i} event={event} key={event._id} />
         ))}
       </div>
