@@ -25,7 +25,7 @@ export default function Member({ isMobile }) {
         `;
 
         const fetchedData = await client.fetch(query);
-        setData(fetchedData.sort(() => Math.random() - 0.5));
+        setData(fetchedData);
         setIsLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
