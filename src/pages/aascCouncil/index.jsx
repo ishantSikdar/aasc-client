@@ -53,7 +53,7 @@ export default function AascCouncilPage({ isMobile }) {
     <div className='my-20 flex flex-col gap-10 md:px-10'>
       <div className='text-[#853333] text-center flex flex-col items-center gap-2 md:mt-10'>
         <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold uppercase underline'>
-          Alumni Relations Student Team
+        Student Team (2024-25)
         </h2>
       </div>
 
@@ -64,7 +64,7 @@ export default function AascCouncilPage({ isMobile }) {
       
       
       <h2 className='text-[#853333] text-center text-xl md:text-4xl underline lg:text-5xl font-bold uppercase mt-6'>
-        FOUNDING TEAM
+        Founding Student Team (2023-24)
       </h2>
       <div className="flex justify-center">
         <button

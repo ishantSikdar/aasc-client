@@ -12,6 +12,12 @@ function AboutPage() {
 
   return (
     <div className="p-6 md:p-20 mt-16 bg-gray-100">
+      <div className='text-[#853333] text-center flex flex-col items-center gap-2 md:mt-10 mb-[50px]'>
+        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold uppercase underline'>
+          About Us
+        </h2>
+      </div>
+
       {/* About Section */}
       <div className="max-w-6xl mx-auto bg-white p-8 md:p-12 shadow-lg rounded-lg text-center">
         <p className="text-lg text-gray-700 leading-relaxed">
