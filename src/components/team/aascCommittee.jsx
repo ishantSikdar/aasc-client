@@ -9,7 +9,7 @@ export default function AlumniCommittee({ isMobile }) {
     async function fetchData() {
       try {
         const query = `
-        *[_type == 'Faculty'] | order(id desc) {
+        *[_type == 'Faculty'] | order(id asc) {
           _id,
           name,
           aImage,
