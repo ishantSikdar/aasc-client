@@ -37,7 +37,7 @@ export default function StudentCouncilCard({
 
       <div className='flex flex-col gap-2 z-20 text-4xl absolute top-3 right-3'>
         {linkedin && (
-          <a href={linkedin}>
+          <a href={linkedin} target='_blank' rel='noreferrer'>
             <img src='/linkedin.png' alt='' className='w-7' />
           </a>
         )}
