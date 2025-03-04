@@ -15,7 +15,7 @@ export default function Member({ isMobile }) {
     async function fetchData() {
       try {
         const query = `
-         *[_type == 'Team'] | order(id desc) {
+         *[_type == 'Team'] | order(id asc) {
           _id,
           name,
           aImage,
