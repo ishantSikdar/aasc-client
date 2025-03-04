@@ -107,7 +107,7 @@ export default function EventDetails() {
 
           {/* socials */}
           <div className='flex gap-4 text-5xl md:text-5xl text-[#853333]'>
-            <FontAwesomeIcon icon={faInstagram} />
+            {/* <FontAwesomeIcon icon={faInstagram} /> */}
             <FontAwesomeIcon icon={faLinkedin} />
           </div>
 

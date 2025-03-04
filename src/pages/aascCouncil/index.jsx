@@ -16,25 +16,26 @@ export default function AascCouncilPage({ isMobile }) {
     async function fetchData() {
       try {
         const query = `
-        *[_type == 'aascTeam'] | order(Date desc) {
-          _id,
-          name,
-          aImage,
-          Pos,
-          linkedin,
-          insta,
-        }
+          *[_type == 'aascTeam'] | order(id asc) {
+            _id,
+            id,
+            name,
+            aImage,
+            Pos,
+            linkedin,
+            insta,
+          }
         `;
-
+  
         const fetchedData = await client.fetch(query);
-        setData(fetchedData.sort(() => Math.random() - 0.5));
+        setData(fetchedData); // No need to sort again
         setIsLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
         setIsLoading(false);
       }
     }
-
+  
     fetchData();
   }, []);
 
