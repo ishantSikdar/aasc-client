@@ -11,7 +11,7 @@ export default function FacultyCard({
         <div className='flex flex-col gap-[1px] items-center text-center'>
           <h3 className='text-[#853333] font-bold text-2xl'>{name}</h3>
           <div className='w-2/3 h-1 bg-[#853333]'></div>
-          <p className='uppercase text-lg font-extrabold mt-2'>{Designation}</p>
+          <p className='uppercase text-lg font-extrabold mt-2'>Hi {Designation}</p>
         </div>
         {/* <p className='text-sm text-gray-700 text-center px-2'>{Description}</p> */}
       </div>
