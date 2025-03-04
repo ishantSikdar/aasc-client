@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { client, urlFor } from '../../lib/sanity'
 import Loader from '../../components/common/Loader'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import EventCard from '../../components/event/eventCard'
 
 export default function EventDetails() {
@@ -54,14 +51,6 @@ export default function EventDetails() {
     fetchEventData()
   }, [])
 
-  function truncateDescription(description, maxLength) {
-    if (description.length > maxLength) {
-      const truncatedText = description.substring(0, maxLength)
-      const lastSpaceIndex = truncatedText.lastIndexOf(' ')
-      return truncatedText.substring(0, lastSpaceIndex)
-    }
-    return description
-  }
 
   return (
     <div className='px-7 md:px-12'>
