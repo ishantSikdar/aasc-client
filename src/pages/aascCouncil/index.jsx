@@ -12,7 +12,6 @@ export default function AascCouncilPage({ isMobile }) {
   const [visibleCount, setVisibleCount] = useState(ITEMS_TO_SHOW);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showFoundingTeam, setShowFoundingTeam] = useState(false);
-  const [showTeamMembers, setShowTeamMembers] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -57,29 +56,11 @@ export default function AascCouncilPage({ isMobile }) {
           Alumni Relations Student Team
         </h2>
       </div>
-      <div className="flex flex-col items-center justify-center">
-        <button
-          onClick={() => setShowTeamMembers(!showTeamMembers)}
-          className="px-6 py-2 w-[250px] mb-4 bg-[#313131] hover:bg-[#494949] text-white rounded-lg transition"
-        >
-          {showTeamMembers ? "Hide Founding Team" : "Reveal Founding Team"}
-        </button>
-      {showTeamMembers && (
-        <>
- <div className="flex flex-col md:flex-row flex-wrap gap-10 md:gap-16 xl:gap-5 justify-center items-center">
-      <Member />
-      </div>
-      </>
-      )}
-
-      </div>
-
-      {/* Reveal Button */}
+      
       <h2 className='text-[#853333] text-center text-xl md:text-4xl underline lg:text-5xl font-bold uppercase mt-6'>
-            FOUNDING TEAM
-          </h2>
+        FOUNDING TEAM
+      </h2>
       <div className="flex justify-center">
-        
         <button
           onClick={() => setShowFoundingTeam(!showFoundingTeam)}
           className="px-6 py-2 bg-[#313131] hover:bg-[#494949] text-white rounded-lg transition"
@@ -88,11 +69,8 @@ export default function AascCouncilPage({ isMobile }) {
         </button>
       </div>
       
-      {/* Founding Team Section */}
       {showFoundingTeam && (
         <>
-          
-
           {isLoading ? (
             <Loader />
           ) : (
@@ -111,7 +89,6 @@ export default function AascCouncilPage({ isMobile }) {
                 ))}
               </div>
 
-              {/* Load More / Load Less button */}
               {data.length > ITEMS_TO_SHOW && (
                 <div className="mt-6 flex justify-center">
                   <button
