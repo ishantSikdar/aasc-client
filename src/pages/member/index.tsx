@@ -3,7 +3,7 @@ import StudentCouncilCard from '../../components/common/StudentCouncilCard'
 import Loader from '../../components/common/Loader'
 import { client, urlFor } from '../../lib/sanity'
 
-const ITEMS_TO_SHOW = 6;
+const ITEMS_TO_SHOW = 7;
 
 export default function Member({ isMobile }) {
   const [data, setData] = useState([]);
@@ -15,7 +15,7 @@ export default function Member({ isMobile }) {
     async function fetchData() {
       try {
         const query = `
-         *[_type == 'Team'] | order(Date desc) {
+         *[_type == 'Team'] | order(id desc) {
           _id,
           name,
           aImage,
