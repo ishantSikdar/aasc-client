@@ -2,11 +2,10 @@ import { useState, useEffect } from 'react'
 import StudentCouncilCard from '../../components/common/StudentCouncilCard'
 import Loader from '../../components/common/Loader'
 import { client, urlFor } from '../../lib/sanity'
-import Member from '../member';
 
 const ITEMS_TO_SHOW = 6;
 
-export default function AascCouncilPage({ isMobile }) {
+export default function Member({ isMobile }) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [visibleCount, setVisibleCount] = useState(ITEMS_TO_SHOW);
@@ -16,13 +15,12 @@ export default function AascCouncilPage({ isMobile }) {
     async function fetchData() {
       try {
         const query = `
-        *[_type == 'aascTeam'] | order(Date desc) {
+         *[_type == 'Team'] | order(Date desc) {
           _id,
           name,
           aImage,
           Pos,
-          linkedin,
-          insta,
+          linkedin
         }
         `;
 
@@ -48,17 +46,7 @@ export default function AascCouncilPage({ isMobile }) {
   };
 
   return (
-    <div className='my-20 flex flex-col gap-10 md:px-10'>
-      <div className='text-[#853333] text-center flex flex-col items-center gap-2 md:mt-10'>
-        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold uppercase'>
-          Alumni Relations Student Team
-        </h2>
-        <div className='h-1 w-[70%] lg:w-[56%] bg-[#853333]'></div>
-      </div>
-      <Member />
-      <h2 className='text-[#853333] text-center text-xl md:text-4xl underline lg:text-5xl font-bold uppercase'>
-          FOUNDER
-        </h2>
+    <div>
       {isLoading ? (
         <Loader />
       ) : (
