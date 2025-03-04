@@ -63,9 +63,9 @@ export default function AlumniCommittee({ isMobile }) {
                   <p className='uppercase text-lg font-semibold text-gray-700'>
                     {item.Designation}
                   </p>
-                  <p className='text-sm text-gray-600 px-4'>
+                  {/* <p className='text-sm text-gray-600 px-4'>
                     {item.Description}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             ))
