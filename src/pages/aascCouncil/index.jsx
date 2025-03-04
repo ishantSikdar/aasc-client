@@ -51,14 +51,14 @@ export default function AascCouncilPage({ isMobile }) {
   return (
     <div className='my-20 flex flex-col gap-10 md:px-10'>
       <div className='text-[#853333] text-center flex flex-col items-center gap-2 md:mt-10'>
-        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold uppercase'>
+        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold uppercase underline'>
           Alumni Relations Student Team
         </h2>
-        <div className='h-1 w-[70%] lg:w-[56%] bg-[#853333]'></div>
+        {/* <div className='h-1 w-[70%] lg:w-[56%] bg-[#853333]'></div> */}
       </div>
       <Member />
       <h2 className='text-[#853333] text-center text-xl md:text-4xl underline lg:text-5xl font-bold uppercase'>
-          FOUNDER
+          FOUNDING TEAM
         </h2>
       {isLoading ? (
         <Loader />
