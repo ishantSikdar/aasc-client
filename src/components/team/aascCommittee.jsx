@@ -6,6 +6,7 @@ export default function AlumniCommittee({ isMobile }) {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    const oldTitle = document.title
     document.title = 'Alumni Assocation'
     async function fetchData() {
       try {
@@ -29,8 +30,14 @@ export default function AlumniCommittee({ isMobile }) {
       }
     }
 
+    return () => {
+      document.title = oldTitle
+    }
+
     fetchData()
   }, [])
+
+
 
   return (
     <div className='my-20 flex flex-col gap-10 md:px-10'>
