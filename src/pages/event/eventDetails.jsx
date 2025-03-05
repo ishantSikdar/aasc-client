@@ -80,12 +80,12 @@ export default function EventDetails() {
       <img
         src={urlFor(eventData?.titleImage).url()}
         alt="Event Cover"
-        className="rounded-3xl  w-32 xl:w-auto object-cover"
+        className="rounded-3xl xl:w-auto object-cover"
       />
       <img
         src={urlFor(eventData?.Image2).url()}
         alt="Cover"
-        className="rounded-3xl  w-32 xl:w-auto object-cover"
+        className="rounded-3xl xl:w-auto object-cover"
       />
     </div>
   </div>
