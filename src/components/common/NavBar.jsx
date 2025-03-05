@@ -134,14 +134,7 @@ export default function NavBar({ isMobile }) {
               onClick={closeMobileMenu}
               className='border-b-[1pt] border-[#252525] p-2'
             >
-              Committee
-            </Link>
-            <Link
-              to={ROUTE_AASC_COMMITTEE}
-              onClick={closeMobileMenu}
-              className='border-b-[1pt] border-[#252525] p-2'
-            >
-              Alumni Committee
+              Alumni Assocation
             </Link>
             <Link
               to={ROUTE_AASC_COUNCIL}
