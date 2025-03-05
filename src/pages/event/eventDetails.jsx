@@ -68,7 +68,7 @@ export default function EventDetails() {
   </div>
 
   {/* Event Details */}
-  <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-10 items-center">
+  <div className="gap-6 md:gap-10 items-center">
     {/* Event Description */}
     <div className="flex flex-col gap-5">
       <h2 className="font-bold text-2xl md:text-3xl text-[#853333] underline">ABOUT THE EVENT</h2>
