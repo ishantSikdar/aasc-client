@@ -76,7 +76,7 @@ export default function EventDetails() {
     </div>
 
     {/* Images */}
-    <div className="grid grid-cols-2 flex w-3/4 justify-center xl:justify-start">
+    <div className="flex w-3/4 justify-center xl:justify-start">
       <img
         src={urlFor(eventData?.titleImage).url()}
         alt="Event Cover"
@@ -105,6 +105,20 @@ export default function EventDetails() {
     <p className="font-bold">
       Venue: <span className="font-medium">{eventData.venue}</span>
     </p>
+    {/* <div className='font-bold'>
+              View Pictures:{' '}
+              <a
+                href={eventData.Link}
+                className='hover:underline text-blue-600 font-medium'
+              >
+                Click to view photos
+              </a>
+            </div> */}
+    <p className="font-bold">
+      View Pictures:{' '} <a className="hover:underline text-blue-600 font-medium" href={
+        eventData.Link
+      }>Click to view photos</a>
+    </p>
   </div>
 </div>
 
@@ -125,15 +139,6 @@ export default function EventDetails() {
               ))
             )}
           </div>
-          <div className='font-bold'>
-              View Pictures:{' '}
-              <a
-                href={eventData.Link}
-                className='hover:underline text-blue-600 font-medium'
-              >
-                Click to view photos
-              </a>
-            </div>
         </div>
       )}
     </div>
