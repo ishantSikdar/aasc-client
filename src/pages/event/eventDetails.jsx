@@ -75,6 +75,8 @@ export default function EventDetails() {
       <p className="text-lg md:text-xl">{eventData.Description}</p>
     </div>
 
+    <br></br><br></br>
+
     {/* Images */}
     <div className="flex justify-around gap-5 max-w-full overflow-x-auto">
       <img
