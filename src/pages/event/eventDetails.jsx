@@ -76,7 +76,7 @@ export default function EventDetails() {
     </div>
 
     {/* Images */}
-    <div className="flex gap-5 max-w-full overflow-x-auto">
+    <div className="flex justify-around gap-5 max-w-full overflow-x-auto">
       <img
         src={urlFor(eventData?.titleImage).url()}
         alt="Event Cover"
