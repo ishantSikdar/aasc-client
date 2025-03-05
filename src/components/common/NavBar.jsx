@@ -85,7 +85,7 @@ export default function NavBar({ isMobile }) {
           <div className='relative py-5 bg-white/80 backdrop-blur-md rounded-full flex justify-between items-center px-7 lg:px-10 gap-10 md:gap-5 lg:gap-14 text-sm font-light uppercase'>
             <NavLink route={ROUTE_HOME} label={'Home'} />
             <NavLink route={ROUTE_ABOUT} label={'About'} />
-            <NavLink route={ROUTE_AASC_COMMITTEE} label={'Alumni Assocation'} />
+            <NavLink route={ROUTE_AASC_COMMITTEE} label={'Alumni Association'} />
             <NavLink route={ROUTE_AASC_COUNCIL} label={'Student Team'} />
             <NavLink route={ROUTE_EVENTS} label={'Events'} />
           </div>
@@ -134,7 +134,7 @@ export default function NavBar({ isMobile }) {
               onClick={closeMobileMenu}
               className='border-b-[1pt] border-[#252525] p-2'
             >
-              Alumni Assocation
+              Alumni Association
             </Link>
             <Link
               to={ROUTE_AASC_COUNCIL}
