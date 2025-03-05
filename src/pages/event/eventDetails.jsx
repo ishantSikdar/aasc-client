@@ -69,7 +69,13 @@ export default function EventDetails() {
 
   {/* Event Details */}
   <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-10 items-center">
-    {/* Cover Image */}
+    {/* Event Description */}
+    <div className="flex flex-col gap-5">
+      <h2 className="font-bold text-2xl md:text-3xl text-[#853333] underline">ABOUT THE EVENT</h2>
+      <p className="text-lg md:text-xl">{eventData.Description}</p>
+    </div>
+
+    {/* Images */}
     <div className="flex flex-col w-3/4 justify-center xl:justify-start">
       <img
         src={urlFor(eventData?.titleImage).url()}
@@ -82,13 +88,8 @@ export default function EventDetails() {
         className="rounded-3xl  w-32 xl:w-auto object-cover"
       />
     </div>
-
-    {/* Event Description */}
-    <div className="flex flex-col gap-5">
-      <h2 className="font-bold text-2xl md:text-3xl text-[#853333]">ABOUT THE EVENT</h2>
-      <p className="text-lg md:text-xl">{eventData.Description}</p>
-    </div>
   </div>
+
 
   {/* Social Media Icons */}
   <div className="flex gap-6 text-4xl md:text-5xl text-[#853333]">
