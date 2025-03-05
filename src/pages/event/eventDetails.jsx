@@ -76,7 +76,7 @@ export default function EventDetails() {
     </div>
 
     {/* Images */}
-    <div className="flex flex-col w-3/4 justify-center xl:justify-start">
+    <div className="grid grid-cols-2 flex w-3/4 justify-center xl:justify-start">
       <img
         src={urlFor(eventData?.titleImage).url()}
         alt="Event Cover"
