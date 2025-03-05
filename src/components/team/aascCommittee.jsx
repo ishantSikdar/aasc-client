@@ -6,8 +6,6 @@ export default function AlumniCommittee({ isMobile }) {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const oldTitle = document.title
-    document.title = 'Alumni Assocation'
     async function fetchData() {
       try {
         const query = `
@@ -28,10 +26,6 @@ export default function AlumniCommittee({ isMobile }) {
       } finally {
         setIsLoading(false)
       }
-    }
-
-    return () => {
-      document.title = oldTitle
     }
 
     fetchData()
