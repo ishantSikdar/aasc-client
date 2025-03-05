@@ -80,12 +80,12 @@ export default function EventDetails() {
       <img
         src={urlFor(eventData?.titleImage).url()}
         alt="Event Cover"
-        className="max-w-[43%]"
+        className="rounded-3xl object-contain max-w-[43%]"
       />
       <img
         src={urlFor(eventData?.Image2).url()}
         alt="Cover"
-        className="max-w-[43%]"
+        className="rounded-3xl object-contain max-w-[43%]"
       />
     </div>
   </div>
