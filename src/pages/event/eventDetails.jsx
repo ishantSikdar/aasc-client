@@ -82,12 +82,12 @@ export default function EventDetails() {
       <img
         src={urlFor(eventData?.titleImage).url()}
         alt="Event Cover"
-        className="rounded-3xl object-contain max-w-[43%]"
+        className="rounded-3xl object-contain max-w-[43%] max-h-[400px]"
       />
       <img
         src={urlFor(eventData?.Image2).url()}
         alt="Cover"
-        className="rounded-3xl object-contain max-w-[43%]"
+        className="rounded-3xl object-contain max-w-[43%] max-h-[400px]"
       />
     </div>
   </div>
@@ -116,11 +116,11 @@ export default function EventDetails() {
                 Click to view photos
               </a>
             </div> */}
-    <p className="font-bold">
+    {/* <p className="font-bold">
       View Pictures:{' '} <a className="hover:underline text-blue-600 font-medium" href={
         eventData.Link
       }>Click to view photos</a>
-    </p>
+    </p> */}
   </div>
 </div>
 
