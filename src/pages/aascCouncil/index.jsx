@@ -66,7 +66,7 @@ export default function AascCouncilPage({ isMobile }) {
           <Loader />
         ) : (
           <>
-            <div className='flex flex-col md:flex-row flex-wrap gap-10 md:gap-16 xl:gap-5 justify-center items-center'>
+            <div className='flex flex-col md:flex-row gap-10 md:gap-16 xl:gap-5 justify-center items-center'>
               {data.slice(0, visibleCount).map((item) => (
                 <StudentCouncilCard
                   key={item._id}
