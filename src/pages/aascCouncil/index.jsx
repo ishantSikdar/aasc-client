@@ -57,7 +57,7 @@ export default function AascCouncilPage({ isMobile }) {
         </h2>
       </div>
 
-      <div className='flex flex-col md:flex-row flex-wrap gap-10 md:gap-16 xl:gap-5 justify-center items-center'>
+      <div className='flex flex-col md:flex-row gap-10 md:gap-16 xl:gap-5 justify-center items-center'>
         <Member />
       </div>
 
