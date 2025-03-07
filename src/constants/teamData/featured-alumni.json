@@ -1,5 +1,11 @@
 [
     {
+        "name": "Piyush Bharti",
+        "link": "https://www.linkedin.com/in/piyush-bharti-1a5820136",
+        "position": "Manager @ HDFC Bank",
+        "image": "https://media.licdn.com/dms/image/v2/D4D35AQFO7qM6ZnMAQg/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1710254330546?e=1741964400&v=beta&t=gkUIotlRS9lngioHN-SSpcorDfequQJiM-9Y4hEIp3I"
+    },
+    {
         "name": "Ayush Bansal",
         "link": "https://www.linkedin.com/in/ayush-bansal-559914214",
         "position": "Support Engineer @ Microsoft",
@@ -46,11 +52,5 @@
         "link": "https://www.linkedin.com/in/disha-malik-8729b4139",
         "position": "Assocaite @ Amazon",
         "image": "https://media.licdn.com/dms/image/v2/D5603AQGmt7Pm1rP9UQ/profile-displayphoto-shrink_800_800/B56ZVvk4yRGQAk-/0/1741333697362?e=1746662400&v=beta&t=axsWRo6x-eCsmEDK8nH3wgZDCcb-YXSxrKUG_BQWCoI"
-    },
-    {
-        "name": "Piyush Bharti",
-        "link": "https://www.linkedin.com/in/piyush-bharti-1a5820136",
-        "position": "Manager @ HDFC Bank",
-        "image": "https://media.licdn.com/dms/image/v2/D4D35AQFO7qM6ZnMAQg/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1710254330546?e=1741964400&v=beta&t=gkUIotlRS9lngioHN-SSpcorDfequQJiM-9Y4hEIp3I"
     }
 ]
